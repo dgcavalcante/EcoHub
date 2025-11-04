@@ -98,14 +98,14 @@ O **EcoHub** segue uma **arquitetura cliente-servidor** modular e escalável:
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/novo1">
+      <a href="https://github.com/SergioGSF">
         <img src="https://avatars.githubusercontent.com/u/203052590?v=4" width="100" style="border-radius:50%;" alt="Foto de Sergio Gonçalves"/>
         <br />
         <sub><b>Sergio Gonçalves</b></sub>
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/novo2">
+      <a href="https://github.com/Leandro-Manuel">
         <img src="https://avatars.githubusercontent.com/u/95945268?v=4" width="100" style="border-radius:50%;" alt="Foto de Leandro Manuel"/>
         <br />
         <sub><b>Leandro Manuel</b></sub>
