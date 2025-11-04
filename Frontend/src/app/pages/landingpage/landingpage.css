@@ -1,0 +1,213 @@
+/* Variáveis de Cor consistentes com o Login */
+:host {
+    --eco-green-light: #C8F7A6; 
+    --eco-green-dark: #376C3A;  
+    --eco-text-dark: #1A340F;   
+    --eco-white: #FFFFFF;
+    --eco-button-hover: #528B55; 
+    --eco-input-border: #9CD17D; 
+    --eco-gray-text: #555;
+    --eco-bg-light: #F4F8F2; /* Um fundo quase branco para seções */
+
+    font-family: Arial, sans-serif;
+}
+
+.landing-page-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+.landing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--eco-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 2px solid var(--eco-green-light);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+}
+
+.header-logo-img {
+    width: 40px; /* Logo menor para o header */
+    height: auto;
+}
+
+.landing-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.landing-nav a {
+    text-decoration: none;
+    color: var(--eco-gray-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.landing-nav a:hover {
+    color: var(--eco-green-dark);
+}
+
+.landing-auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-login, .btn-signup {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 2px solid var(--eco-green-dark);
+    color: var(--eco-green-dark);
+}
+
+.btn-login:hover {
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+}
+
+.btn-signup {
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+    border: 2px solid var(--eco-green-dark);
+}
+
+.btn-signup:hover {
+    background-color: var(--eco-button-hover);
+    border-color: var(--eco-button-hover);
+}
+
+/* Seção Hero */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5%;
+    background-color: var(--eco-bg-light);
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--eco-text-dark);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--eco-gray-text);
+    margin-bottom: 2rem;
+}
+
+.btn-get-started {
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-get-started:hover {
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Seção de Recursos */
+.features-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: var(--eco-white);
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    color: var(--eco-text-dark);
+    margin-bottom: 3rem;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.feature-item {
+    flex-basis: 300px;
+    padding: 2rem;
+    background-color: var(--eco-bg-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--eco-green-light);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    /* Adicione um SVG ou ícone aqui */
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    color: var(--eco-green-dark);
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    color: var(--eco-gray-text);
+}
+
+/* Rodapé */
+.landing-footer {
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: var(--eco-text-dark);
+    color: var(--eco-white);
+}

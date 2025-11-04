@@ -1,0 +1,147 @@
+/* Variáveis de Cor (Mesmas do Login) */
+:host {
+    --eco-green-light: #C8F7A6; 
+    --eco-green-dark: #376C3A;  
+    --eco-text-dark: #1A340F;   
+    --eco-white: #FFFFFF;
+    --eco-button-hover: #528B55; 
+    --eco-input-border: #9CD17D; 
+
+    display: block;
+    min-height: 100vh; /* MUDADO: De height para min-height */
+    font-family: Arial, sans-serif;
+    /* REMOVIDO: overflow: hidden; */
+}
+
+/* Estrutura principal */
+.cadastro-split-container {
+    display: flex;
+    min-height: 100vh;
+    color: var(--eco-white);
+}
+
+/* Painel Esquerdo (Logo) */
+.cadastro-left-panel {
+    flex: 1;
+    background-color: var(--eco-green-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cadastro-logo-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.ecohub-logo-img {
+    width: 250px; 
+    height: auto; 
+}
+
+/* Painel Direito (Formulário) */
+.cadastro-right-panel {
+    flex: 1; 
+    background-color: var(--eco-green-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; 
+    /* REMOVIDO: overflow-y: auto; (Agora a página inteira rola) */
+}
+
+.cadastro-content {
+    width: 100%;
+    max-width: 350px; 
+    text-align: center;
+    /* MUDADO: Garante padding em cima e embaixo */
+    padding: 3rem 0; 
+}
+
+.cadastro-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem; 
+    color: var(--eco-white);
+    font-weight: normal;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espaço entre os grupos de campos */
+}
+
+/* Estilo do Formulário (Label Flutuante) */
+.form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--eco-input-border); 
+    color: var(--eco-white);
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para o input de data não mostrar o ícone de calendário */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.form-group input:focus {
+    border-bottom-color: var(--eco-white); 
+}
+
+.form-group label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.2rem;
+    color: var(--eco-input-border);
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group input[type="date"] + label {
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: var(--eco-white);
+}
+
+.form-group input:not([value=""]) + label {
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: var(--eco-white);
+}
+
+/* Botão Final de Cadastro */
+.btn-cadastrar-final {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 1rem; /* Espaço antes do botão */
+    
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+}
+
+.btn-cadastrar-final:hover {
+    background-color: var(--eco-button-hover);
+    color: var(--eco-white);
+}
