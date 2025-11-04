@@ -58,8 +58,8 @@ Assim, o EcoHub atua como uma ponte entre **tecnologia, sustentabilidade e econo
 ---
 
 ### 🛠️ **4. Tecnologias Utilizadas**
-**Frontend:** Angular 18, TypeScript, HTML5, CSS  
-**Backend:** Java 21, Spring Boot, REST API  
+**Frontend:** Angular 20, TypeScript, HTML5, CSS  
+**Backend:** Java 17, Spring Boot 4.0, REST API  
 **Banco de Dados:** PostgreSQL  
 **Ferramentas de Apoio:** Figma, Postman, Docker, GitHub Actions, Trello
 
