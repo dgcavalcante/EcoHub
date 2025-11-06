@@ -1,20 +1,21 @@
-/* Variáveis de Cor consistentes com o Login */
+/* Variáveis de Cor (Baseadas no seu design) */
 :host {
-    --eco-green-light: #C8F7A6; 
-    --eco-green-dark: #376C3A;  
-    --eco-text-dark: #1A340F;   
+    --eco-green-dark: #376C3A;
+    --eco-green-light: #C8F7A6;
+    --eco-text-dark: #1A340F;
     --eco-white: #FFFFFF;
-    --eco-button-hover: #528B55; 
-    --eco-input-border: #9CD17D; 
-    --eco-gray-text: #555;
-    --eco-bg-light: #F4F8F2; /* Um fundo quase branco para seções */
-
+    --eco-bg-light-gray: #f9f9f9; /* Fundo suave para seções */
+    --eco-text-gray: #555;
+    
+    /* Configuração do Host */
+    display: block;
     font-family: Arial, sans-serif;
+    color: var(--eco-text-gray);
+    line-height: 1.6;
 }
 
 .landing-page-container {
     width: 100%;
-    overflow-x: hidden;
 }
 
 /* Cabeçalho */
@@ -23,23 +24,26 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: var(--eco-white);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-bottom: 2px solid var(--eco-green-light);
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: var(--eco-text-dark);
+    cursor: pointer;
+    color: var(--eco-white);
 }
 
 .header-logo-img {
-    width: 40px; /* Logo menor para o header */
+    width: 35px;
     height: auto;
+    margin-right: 10px;
+    /* Filtro para fazer o logo PNG ficar branco */
+    filter: brightness(0) invert(1); 
 }
 
 .landing-nav {
@@ -48,14 +52,17 @@
 }
 
 .landing-nav a {
+    color: var(--eco-white);
     text-decoration: none;
-    color: var(--eco-gray-text);
-    font-weight: 600;
+    font-weight: 500;
     transition: color 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
 }
 
 .landing-nav a:hover {
-    color: var(--eco-green-dark);
+    color: var(--eco-green-light);
+    border-bottom-color: var(--eco-green-light);
 }
 
 .landing-auth-buttons {
@@ -63,36 +70,40 @@
     gap: 1rem;
 }
 
-.btn-login, .btn-signup {
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
+.btn-login,
+.btn-signup {
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
     cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
     transition: all 0.3s ease;
 }
 
 .btn-login {
     background-color: transparent;
-    border: 2px solid var(--eco-green-dark);
-    color: var(--eco-green-dark);
+    border: 2px solid var(--eco-white);
+    color: var(--eco-white);
 }
 
 .btn-login:hover {
-    background-color: var(--eco-green-dark);
-    color: var(--eco-white);
+    background-color: var(--eco-white);
+    color: var(--eco-green-dark);
 }
 
 .btn-signup {
-    background-color: var(--eco-green-dark);
-    color: var(--eco-white);
-    border: 2px solid var(--eco-green-dark);
+    background-color: var(--eco-green-light);
+    border: 2px solid var(--eco-green-light);
+    color: var(--eco-text-dark); /* Texto escuro no botão claro */
 }
 
 .btn-signup:hover {
-    background-color: var(--eco-button-hover);
-    border-color: var(--eco-button-hover);
+    background-color: var(--eco-white);
+    border-color: var(--eco-white);
+    color: var(--eco-green-dark);
 }
 
 /* Seção Hero */
@@ -100,9 +111,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4rem 5%;
-    background-color: var(--eco-bg-light);
-    min-height: 80vh;
+    padding: 5rem 5%;
+    background-color: var(--eco-bg-light-gray);
+    gap: 2rem;
 }
 
 .hero-content {
@@ -114,31 +125,35 @@
     font-size: 3rem;
     color: var(--eco-text-dark);
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    color: var(--eco-gray-text);
-    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    color: var(--eco-text-gray);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
 }
 
 .btn-get-started {
-    background-color: var(--eco-green-light);
-    color: var(--eco-text-dark);
-    padding: 1rem 2rem;
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+    padding: 0.8rem 2rem;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-get-started:hover {
-    background-color: var(--eco-green-dark);
-    color: var(--eco-white);
+    background-color: var(--eco-text-dark); /* Um pouco mais escuro */
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .hero-image {
@@ -154,7 +169,7 @@
 
 /* Seção de Recursos */
 .features-section {
-    padding: 4rem 5%;
+    padding: 5rem 5%;
     text-align: center;
     background-color: var(--eco-white);
 }
@@ -162,52 +177,86 @@
 .features-section h2 {
     font-size: 2.5rem;
     color: var(--eco-text-dark);
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
 .feature-grid {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .feature-item {
-    flex-basis: 300px;
-    padding: 2rem;
-    background-color: var(--eco-bg-light);
+    background-color: var(--eco-bg-light-gray);
+    padding: 2.5rem 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
     width: 60px;
     height: 60px;
-    background-color: var(--eco-green-light);
     border-radius: 50%;
+    background-color: var(--eco-green-light);
     margin: 0 auto 1.5rem auto;
-    /* Adicione um SVG ou ícone aqui */
+    /* Placeholder - adicione seu ícone SVG aqui */
+    border: 2px solid var(--eco-green-dark);
 }
 
 .feature-item h3 {
     font-size: 1.5rem;
+    margin-bottom: 0.8rem;
     color: var(--eco-green-dark);
-    margin-bottom: 1rem;
 }
 
 .feature-item p {
-    color: var(--eco-gray-text);
+    font-size: 1rem;
+    color: var(--eco-text-gray);
 }
 
 /* Rodapé */
 .landing-footer {
-    padding: 2rem 5%;
     text-align: center;
-    background-color: var(--eco-text-dark);
+    padding: 2.5rem 5%;
+    background-color: var(--eco-green-dark);
     color: var(--eco-white);
+    margin-top: 2rem;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .landing-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .landing-nav {
+        gap: 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 3rem 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
 }

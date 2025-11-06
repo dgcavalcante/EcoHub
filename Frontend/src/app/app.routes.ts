@@ -2,10 +2,35 @@ import { Routes } from '@angular/router';
 import { LandingPage } from './pages/landingpage/landingpage';
 import { Login } from './pages/login/login';
 import { Cadastro } from './pages/cadastro/cadastro';
+import { Dashboard } from './pages/dashboard/dashboard';
+import { ControleAparelhos } from './pages/controle-aparelhos/controle-aparelhos';
+import { GerarRelatorios } from './pages/gerar-relatorios/gerar-relatorios';
+import { AnaliseConsumo } from './pages/analise-consumo/analise-consumo';
+import { MonitoramentoDesperdicio } from './pages/monitoramento-desperdicio/monitoramento-desperdicio';
+import { RelatoriosDetalhados } from './pages/relatorios-detalhados/relatorios-detalhados';
+import { RecomendacaoConsumo } from './pages/recomendacao-consumo/recomendacao-consumo';
+import { PerfilAcesso } from './pages/perfil-acesso/perfil-acesso';
+import { RecuperarSenha } from './pages/recuperar-senha/recuperar-senha';
+import { EditarPerfil } from './pages/editar-perfil/editar-perfil';
+import { PaginaNaoEncontrada } from './pages/pagina-nao-encontrada/pagina-nao-encontrada';
+import { AdicionarPerfil } from './pages/adicionar-perfil/adicionar-perfil';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'landingpage', pathMatch: 'full' },
   { path: 'landingpage', component: LandingPage },
   { path: 'login', component: Login },
   { path: 'cadastro', component: Cadastro },
+  { path: 'dashboard', component: Dashboard },
+  { path: 'controle-aparelhos', component: ControleAparelhos },
+  { path: 'gerar-relatorios', component: GerarRelatorios },
+  { path: 'analise-consumo', component: AnaliseConsumo },
+  { path: 'monitoramento-desperdicio', component: MonitoramentoDesperdicio },
+  { path: 'monitoramento-desperdicio', component: MonitoramentoDesperdicio },
+  { path: 'relatorios-detalhados', component: RelatoriosDetalhados },
+  { path: 'recomendacao-consumo', component: RecomendacaoConsumo },
+  { path: 'perfil-acesso', component: PerfilAcesso },
+  { path: 'recuperar-senha', component: RecuperarSenha },
+  { path: 'editar-perfil', component: EditarPerfil },
+  { path: 'adicionar-perfil', component: AdicionarPerfil },
+  { path: '**', component: PaginaNaoEncontrada }, 
 ];

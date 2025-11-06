@@ -1,0 +1,215 @@
+/* Variáveis de Cor (Mesmas da Dashboard) */
+:host {
+    --eco-green-dark: #376C3A;
+    --eco-green-light: #C8F7A6;
+    --eco-bg-light: #E8F5E9;
+    --eco-text-dark: #1A340F;
+    --eco-text-light: #F0F0F0;
+    --eco-text-gray: #6B7280;
+    --eco-white: #FFFFFF;
+    --eco-border: #D1D5DB;
+
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Barra Lateral (Estilo idêntico ao da Dashboard) */
+.sidebar {
+    flex: 0 0 260px;
+    background-color: var(--eco-green-dark);
+    color: var(--eco-text-light);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar-logo img {
+    width: 100px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    color: var(--eco-text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav li a svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 1rem;
+    stroke-width: 2;
+}
+
+.sidebar-nav li a:hover {
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+}
+
+.sidebar-nav li a.active {
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+    font-weight: bold;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.sidebar-footer a {
+    display: flex;
+    align-items: center;
+    color: var(--eco-text-light);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.sidebar-footer a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-footer a svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 1rem;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    background-color: var(--eco-bg-light);
+    padding: 2rem 3rem;
+    overflow-y: auto;
+}
+
+/* Cabeçalho do Conteúdo */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+    margin: 0;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-icons a {
+    color: var(--eco-text-gray);
+    position: relative;
+    text-decoration: none;
+}
+.header-icons a svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Container da Análise */
+.analysis-container {
+    /* Removido o layout de grid de duas colunas */
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Card Principal do Gráfico */
+.chart-card {
+    background-color: var(--eco-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.chart-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+    margin: 0;
+}
+
+.time-filters {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--eco-bg-light);
+    border-radius: 20px;
+    padding: 0.25rem;
+}
+
+.time-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--eco-text-gray);
+    transition: all 0.3s ease;
+}
+
+.time-btn:hover {
+    color: var(--eco-text-dark);
+}
+
+.time-btn.active {
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-placeholder {
+    width: 100%;
+    /* Mantém a proporção do gráfico */
+    aspect-ratio: 16 / 9; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}

@@ -1,0 +1,308 @@
+/* Variáveis de Cor (Mesmas da Dashboard) */
+:host {
+    --eco-green-dark: #376C3A;
+    --eco-green-light: #C8F7A6;
+    --eco-bg-light: #E8F5E9;
+    --eco-text-dark: #1A340F;
+    --eco-text-light: #F0F0F0;
+    --eco-text-gray: #6B7280;
+    --eco-white: #FFFFFF;
+    --eco-border: #D1D5DB;
+    --eco-alert: #EF4444;
+
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Barra Lateral (Estilo idêntico ao da Dashboard) */
+.sidebar {
+    flex: 0 0 260px;
+    background-color: var(--eco-green-dark);
+    color: var(--eco-text-light);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar-logo img {
+    width: 100px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    color: var(--eco-text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav li a svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 1rem;
+    stroke-width: 2;
+}
+
+.sidebar-nav li a:hover {
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+}
+
+.sidebar-nav li a.active {
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+    font-weight: bold;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.sidebar-footer a {
+    display: flex;
+    align-items: center;
+    color: var(--eco-text-light);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.sidebar-footer a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-footer a svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 1rem;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    background-color: var(--eco-bg-light);
+    padding: 2rem 3rem;
+    overflow-y: auto;
+}
+
+/* Cabeçalho do Conteúdo */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+    margin: 0;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-icons a {
+    color: var(--eco-text-gray);
+    position: relative;
+    text-decoration: none;
+}
+.header-icons a svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Título da Seção */
+.section-header {
+    margin-bottom: 1.5rem;
+}
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+    margin: 0;
+}
+
+/* Filtros */
+.device-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background-color: var(--eco-white);
+    border: 1px solid var(--eco-border);
+    border-radius: 50%; /* Botões redondos */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--eco-text-gray);
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+    border-color: var(--eco-green-light);
+}
+
+.filter-btn.active {
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+    border-color: var(--eco-green-dark);
+}
+
+.filter-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Grid de Dispositivos */
+.devices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.device-card {
+    background-color: var(--eco-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.device-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.device-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--eco-bg-light);
+    color: var(--eco-text-gray);
+}
+
+.device-card.active .device-icon {
+    background-color: var(--eco-green-light);
+    color: var(--eco-green-dark);
+}
+
+.device-card.active .device-icon svg {
+    stroke: var(--eco-green-dark);
+}
+
+.card-body h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+    margin: 0 0 0.25rem 0;
+}
+
+.card-body .status {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--eco-text-gray);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.device-card.active .card-body .status {
+    color: var(--eco-green-dark);
+    font-weight: bold;
+}
+
+.card-body .consumption {
+    font-size: 0.85rem;
+    color: var(--eco-text-gray);
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px; /* Tamanho do switch */
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--eco-border);
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--eco-green-dark);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}

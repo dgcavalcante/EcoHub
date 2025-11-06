@@ -1,7 +1,7 @@
 <div class="landing-page-container">
-    <!-- Cabeçalho -->
+    
     <header class="landing-header">
-        <div class="logo-container">
+        <div class="logo-container" routerLink="/">
             <img src="ecohub-logo.png" alt="Logo EcoHub" class="header-logo-img">
             <span>EcoHub</span>
         </div>
@@ -10,37 +10,29 @@
             <a href="#about">Sobre</a>
             <a href="#contact">Contato</a>
         </nav>
-        
-        <!-- ============================================== -->
-        <!--        MUDANÇA FEITA AQUI (usando <a>)         -->
-        <!-- ============================================== -->
         <div class="landing-auth-buttons">
             <a routerLink="/login" class="btn-login">Login</a>
             <a routerLink="/cadastro" class="btn-signup">Cadastro</a>
         </div>
     </header>
 
-    <!-- Seção Principal (Hero) -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>Bem-vindo ao EcoHub</h1>
             <p>Sua plataforma inteligente para gestão de energia e sustentabilidade.</p>
-            
-            <!-- MUDANÇA FEITA AQUI TAMBÉM -->
             <a routerLink="/cadastro" class="btn-get-started">Comece Agora</a>
         </div>
         <div class="hero-image">
-            <!-- Você pode substituir isso por uma ilustração ou imagem real -->
             <img src="https://placehold.co/600x400/C8F7A6/1A340F?text=Ilustra%C3%A7%C3%A3o+EcoHub" alt="Ilustração EcoHub">
         </div>
     </section>
 
-    <!-- Seção de Recursos -->
     <section id="features" class="features-section">
         <h2>Recursos Principais</h2>
         <div class="feature-grid">
             <div class="feature-item">
-                <div class="feature-icon"></div>
+                <div class="feature-icon">
+                    </div>
                 <h3>Monitoramento Inteligente</h3>
                 <p>Acompanhe seu consumo de energia em tempo real.</p>
             </div>
@@ -54,12 +46,15 @@
                 <h3>Alertas Personalizados</h3>
                 <p>Seja notificado sobre picos de consumo ou anomalias.</p>
             </div>
+             <div class="feature-item">
+                <div class="feature-icon"></div>
+                <h3>Recomendações Verdes</h3>
+                <p>Dicas para economizar energia e reduzir sua pegada de carbono.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer class="landing-footer">
+    <footer id="contact" class="landing-footer">
         <p>&copy; 2025 EcoHub. Todos os direitos reservados.</p>
     </footer>
 </div>
-

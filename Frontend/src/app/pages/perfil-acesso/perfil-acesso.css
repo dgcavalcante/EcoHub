@@ -1,0 +1,173 @@
+/* CSS para a tela de Perfis de Acesso (Netflix-style).
+  Coloque-o em 'perfil-acesso.component.css'
+*/
+
+:host {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+    background-color: #141414; /* Fundo escuro similar à Netflix */
+    font-family: 'Arial', sans-serif;
+    color: #E5E5E5;
+    box-sizing: border-box;
+}
+
+.perfil-acesso-container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 90%; /* Limita a largura para telas grandes */
+}
+
+.perfil-header h1 {
+    font-size: 3.5rem; /* Tamanho grande para o título */
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: #FFF; /* Título branco */
+}
+
+.perfis-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    justify-content: center;
+    gap: 2rem; /* Espaçamento entre os cards */
+    margin-bottom: 3rem;
+}
+
+.perfil-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #E5E5E5;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    width: 180px; /* Largura fixa para os cards */
+}
+
+.perfil-card img {
+    width: 180px; /* Tamanho da imagem do perfil */
+    height: 180px;
+    border-radius: 4px; /* Levemente arredondado */
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    border: 3px solid transparent; /* Borda transparente inicial */
+    transition: border-color 0.3s ease;
+}
+
+.perfil-card .perfil-nome {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #E5E5E5;
+    transition: color 0.3s ease;
+}
+
+/* Efeito hover nos cards */
+.perfil-card:hover {
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+.perfil-card:hover img {
+    border-color: #C8F7A6; /* Borda verde claro no hover */
+}
+
+.perfil-card:hover .perfil-nome {
+    color: #C8F7A6; /* Nome verde claro no hover */
+}
+
+/* Estilo para o card de adicionar perfil */
+.add-perfil {
+    background-color: transparent;
+}
+
+.add-perfil .add-icon {
+    width: 180px;
+    height: 180px;
+    background-color: #333; /* Fundo cinza escuro para o + */
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 3px solid transparent; /* Borda transparente inicial */
+}
+
+.add-perfil .add-icon svg {
+    color: #E5E5E5; /* Cor do + */
+    transition: color 0.3s ease;
+}
+
+.add-perfil:hover .add-icon {
+    background-color: #444; /* Um pouco mais claro no hover */
+    border-color: #C8F7A6; /* Borda verde claro no hover */
+}
+
+.add-perfil:hover .add-icon svg {
+    color: #C8F7A6; /* + verde claro no hover */
+}
+
+.add-perfil .perfil-nome {
+    color: #E5E5E5;
+}
+
+/* Botão de Gerenciar Perfis (se você decidir usar) */
+.btn-gerenciar-perfis {
+    background: none;
+    border: 1px solid #E5E5E5;
+    color: #E5E5E5;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-gerenciar-perfis:hover {
+    background-color: #E5E5E5;
+    color: #141414;
+    border-color: #E5E5E5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .perfil-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .perfil-card {
+        width: 140px;
+    }
+
+    .perfil-card img,
+    .add-perfil .add-icon {
+        width: 140px;
+        height: 140px;
+    }
+
+    .perfil-card .perfil-nome {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfil-header h1 {
+        font-size: 2rem;
+    }
+
+    .perfis-grid {
+        gap: 1rem;
+    }
+
+    .perfil-card {
+        width: 120px;
+    }
+
+    .perfil-card img,
+    .add-perfil .add-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .perfil-card .perfil-nome {
+        font-size: 0.9rem;
+    }
+}

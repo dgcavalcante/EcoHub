@@ -1,0 +1,239 @@
+/* Variáveis de Cor (Mesmas da Dashboard) */
+:host {
+    --eco-green-dark: #376C3A;
+    --eco-green-light: #C8F7A6;
+    --eco-bg-light: #E8F5E9;
+    --eco-text-dark: #1A340F;
+    --eco-text-light: #F0F0F0;
+    --eco-text-gray: #6B7280;
+    --eco-white: #FFFFFF;
+    --eco-border: #D1D5DB;
+
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Barra Lateral (Estilo idêntico ao da Dashboard) */
+.sidebar {
+    flex: 0 0 260px;
+    background-color: var(--eco-green-dark);
+    color: var(--eco-text-light);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar-logo img {
+    width: 100px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    color: var(--eco-text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav li a svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 1rem;
+    stroke-width: 2;
+}
+
+.sidebar-nav li a:hover {
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+}
+
+.sidebar-nav li a.active {
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+    font-weight: bold;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.sidebar-footer a {
+    display: flex;
+    align-items: center;
+    color: var(--eco-text-light);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.sidebar-footer a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-footer a svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 1rem;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    background-color: var(--eco-bg-light);
+    padding: 2rem 3rem;
+    overflow-y: auto;
+}
+
+/* Cabeçalho do Conteúdo */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+    margin: 0;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-icons a {
+    color: var(--eco-text-gray);
+    position: relative;
+    text-decoration: none;
+}
+.header-icons a svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Container do Formulário de Relatório */
+.report-form-container {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Coluna do formulário e coluna do preview */
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.form-card {
+    background-color: var(--eco-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-card h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--eco-text-gray);
+    margin-bottom: 0.5rem;
+}
+
+.form-group select,
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--eco-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--eco-white);
+    font-family: Arial, sans-serif;
+    color: var(--eco-text-dark);
+}
+
+/* Grupo de datas (lado a lado) */
+.date-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.date-group .form-group {
+    flex: 1; /* Faz com que ocupem o espaço igualmente */
+}
+
+/* Botão Gerar */
+.btn-gerar {
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.btn-gerar:hover {
+    background-color: var(--eco-text-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder do Relatório (Tela Gerar Relatório 2) */
+.report-preview-placeholder {
+    flex: 1;
+    background-color: var(--eco-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    min-height: 400px; /* Altura mínima para o placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--eco-border);
+    color: var(--eco-text-gray);
+}

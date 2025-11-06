@@ -1,0 +1,78 @@
+/* Variáveis de Cor (Baseadas no design) */
+:host {
+    --eco-green-dark: #376C3A;
+    --eco-green-light: #C8F7A6;
+    --eco-bg-light: #E8F5E9;
+    --eco-text-dark: #1A340F;
+    --eco-text-gray: #6B7280;
+    --eco-white: #FFFFFF;
+
+    display: block;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.not-found-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--eco-bg-light); /* Fundo claro */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.not-found-content {
+    max-width: 500px;
+}
+
+.not-found-content svg {
+    color: var(--eco-green-dark);
+    margin-bottom: 1.5rem;
+}
+
+.not-found-content h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--eco-green-dark);
+    margin: 0;
+    line-height: 1;
+}
+
+.not-found-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--eco-text-dark);
+    margin: 1rem 0;
+}
+
+.not-found-content p {
+    font-size: 1.1rem;
+    color: var(--eco-text-gray);
+    margin: 0 0 2.5rem 0;
+    line-height: 1.6;
+}
+
+.btn-voltar {
+    background-color: var(--eco-green-dark);
+    color: var(--eco-white);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-voltar:hover {
+    background-color: var(--eco-text-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

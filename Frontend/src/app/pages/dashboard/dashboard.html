@@ -1,0 +1,144 @@
+<div class="dashboard-container">
+    
+    <!-- Barra Lateral de Navegação -->
+    <aside class="sidebar">
+    <div class="sidebar-logo">
+        <img src="ecohub-logo.png" alt="EcoHub Logo">
+    </div>
+    
+    <nav class="sidebar-nav">
+        <ul>
+            <li>
+                <!-- 
+                  Para o link ativo, usamos a diretiva 'routerLinkActive'.
+                  [routerLinkActiveOptions]="{exact: true}" garante que o link
+                  só fique ativo quando a URL for exatamente a mesma.
+                -->
+                <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/controle-aparelhos" routerLinkActive="active">
+                    <!-- Ícone "Aparelhos/Tomada" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v2"></path><path d="M10 20v-5"></path><path d="M14 20v-5"></path><path d="M12 15h.01"></path><path d="M4 10h16v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6Z"></path></svg>
+                    <span>Aparelhos</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/analise-consumo" routerLinkActive="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    <span>Análise de Consumo</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/monitoramento-desperdicio" routerLinkActive="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                    <span>Monitoramento</span>
+                </a>
+            </li>
+             <li>
+                <a routerLink="/recomendacao-consumo" routerLinkActive="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.09 14.05C15.03 13.5 15 12.76 15 12c0-.76.03-1.5.09-2.05.17-1.39.73-2.58 1.58-3.44.84-.85 1.98-1.5 3.33-1.61"></path><path d="M9 12c0 .76-.03 1.5-.09 2.05-.17 1.39-.73 2.58-1.58 3.44-.84.85-1.98 1.5-3.33 1.61"></path><path d="M12 2a4 4 0 0 0-4 4v2c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V6a4 4 0 0 0-4-4Z"></path><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17h2a2.5 2.5 0 0 0 2.5-2.5V10h-7v4.5Z"></path></svg>
+                    <span>Recomendações</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/gerar-relatorios" routerLinkActive="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                    <span>Gerar Relatórios</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/relatorios-detalhados" routerLinkActive="active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                    <span>Relatórios Detalhados</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+        <a routerLink="/editar-perfil" routerLinkActive="active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Editar Perfil</span>
+        </a>
+    </div>
+</aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Cabeçalho do Conteúdo -->
+        <header class="main-header">
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+            <div class="header-icons">
+                <a routerLink="/perfil-acesso" class="user-profile-icon">
+                    <!-- Ícone (SVG) de "Usuário" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </a>
+            </div>
+        </header>
+
+        <!-- Seção de Boas-Vindas -->
+        <section class="welcome-header">
+            <h1>Olá, [Nome]!</h1>
+            <p>Bem-vindo de volta ao seu painel de controle energético.</p>
+        </section>
+
+        <!-- Card Principal de Consumo -->
+        <section class="main-summary-card">
+            <div class="summary-text">
+                <h2>CONSUMO DO DIA</h2>
+                <span class="summary-value">12,4 <span class="unit">kWh</span></span>
+                <span class="summary-comparison">15% acima de ontem</span>
+            </div>
+            <div class="summary-chart-icon">
+                <!-- Ícone (SVG) de "Gráfico" -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+            </div>
+        </section>
+
+        <!-- Grid de Estatísticas Rápidas -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Dispositivos Ativos</h3>
+                <span class="stat-value">9</span>
+                <a routerLink="/controle-aparelhos" class="stat-link">Ver todos</a>
+            </div>
+            <div class="stat-card">
+                <h3>Meta Mensal</h3>
+                <span class="stat-value">78%</span>
+                <span class="stat-subtext">Atingida</span>
+            </div>
+            <div class="stat-card alert">
+                <h3>Alertas</h3>
+                <span class="stat-value">2</span>
+                <span class="stat-subtext">Novos alertas de consumo</span>
+            </div>
+        </section>
+
+        <!-- Seção de Recomendações -->
+        <section class="recommendations-section">
+            <h2>Recomendações para você</h2>
+            <ul class="recommendation-list">
+                <li class="recommendation-item">
+                    <div class="rec-icon">💡</div>
+                    <div class="rec-text">
+                        <strong>Considere trocar as lâmpadas</strong>
+                        <p>Lâmpadas LED podem economizar até 80% de energia.</p>
+                    </div>
+                </li>
+                <li class="recommendation-item">
+                    <div class="rec-icon">🔌</div>
+                    <div class="rec-text">
+                        <strong>Desligue aparelhos em stand-by</strong>
+                        <p>Seu 'Monitor' está em stand-by há 6 horas.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</div>

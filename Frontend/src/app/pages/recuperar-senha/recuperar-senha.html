@@ -1,1 +1,30 @@
-<p>recuperar-senha works!</p>
+<div class="recover-split-container">
+    <!-- PAINEL ESQUERDO: LOGO (Igual ao do Login) -->
+    <div class="recover-left-panel">
+        <div class="recover-logo-section">
+            <img src="ecohub-logo.png" alt="Logo EcoHub" class="ecohub-logo-img">
+        </div>
+    </div>
+
+    <!-- PAINEL DIREITO: FORMULÁRIO -->
+    <div class="recover-right-panel">
+        <div class="recover-content">
+            <h3>RECUPERAR SENHA</h3>
+            
+            <p class="recover-instructions">
+                Digite seu e-mail para receber as instruções de recuperação.
+            </p>
+
+            <form class="recover-form">
+                <div class="form-group">
+                    <input type="email" id="recover-email" required placeholder=" ">
+                    <label for="recover-email">EMAIL</label>
+                </div>
+
+                <button type="submit" class="btn-enviar">ENVIAR</button>
+                
+                <a routerLink="/login" class="back-to-login">Voltar para o Login</a>
+            </form>
+        </div>
+    </div>
+</div>

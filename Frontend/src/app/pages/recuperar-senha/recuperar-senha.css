@@ -1,0 +1,160 @@
+/* Variáveis de Cor (Mesmas do Login) */
+:host {
+    --eco-green-light: #C8F7A6; 
+    --eco-green-dark: #376C3A;  
+    --eco-text-dark: #1A340F;   
+    --eco-white: #FFFFFF;
+    --eco-button-hover: #528B55; 
+    --eco-input-border: #9CD17D; 
+
+    display: block;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden; 
+}
+
+/* Estrutura principal (idêntica ao login) */
+.recover-split-container {
+    display: flex;
+    min-height: 100vh;
+    color: var(--eco-white);
+}
+
+/* Painel Esquerdo (Logo) */
+.recover-left-panel {
+    flex: 1;
+    background-color: var(--eco-green-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.recover-logo-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.ecohub-logo-img {
+    width: 250px; 
+    height: auto; 
+}
+
+/* Painel Direito (Formulário) */
+.recover-right-panel {
+    flex: 1; 
+    background-color: var(--eco-green-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.recover-content {
+    width: 100%;
+    max-width: 350px; 
+    text-align: center;
+}
+
+.recover-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem; 
+    color: var(--eco-white);
+    font-weight: normal;
+}
+
+.recover-instructions {
+    font-size: 1rem;
+    color: var(--eco-input-border); /* Cor clara, mas não branca */
+    margin: 0 auto 2.5rem auto;
+    max-width: 300px;
+    line-height: 1.5;
+}
+
+.recover-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+/* Estilo do Formulário (Label Flutuante) */
+.form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--eco-input-border); 
+    color: var(--eco-white);
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-bottom-color: var(--eco-white); 
+}
+
+.form-group label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.2rem;
+    color: var(--eco-input-border);
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: var(--eco-white);
+}
+
+.form-group input:not([value=""]) + label {
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: var(--eco-white);
+}
+
+/* Botão Enviar */
+.btn-enviar {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 1rem;
+    
+    background-color: var(--eco-green-light);
+    color: var(--eco-text-dark);
+}
+
+.btn-enviar:hover {
+    background-color: var(--eco-button-hover);
+    color: var(--eco-white);
+}
+
+/* Link de Voltar */
+.back-to-login {
+    display: block;
+    margin-top: 1.5rem;
+    color: var(--eco-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.back-to-login:hover {
+    color: var(--eco-green-light);
+}

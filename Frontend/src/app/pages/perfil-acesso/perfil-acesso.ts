@@ -3,12 +3,12 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-recuperar-senha',
+  selector: 'app-perfil-acesso',
   standalone: true,
   imports: [RouterModule,CommonModule],
-  templateUrl: './recuperar-senha.html',
-  styleUrl: './recuperar-senha.css',
+  templateUrl: './perfil-acesso.html',
+  styleUrl: './perfil-acesso.css',
 })
-export class RecuperarSenha {
+export class PerfilAcesso {
 
 }

@@ -1,0 +1,173 @@
+/* CSS para a tela de Configuração de Perfil.
+  Coloque-o em 'perfil-configuracao.component.css'
+*/
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #141414; /* Mantém o fundo escuro consistente */
+    font-family: 'Arial', sans-serif;
+    color: #E5E5E5;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.perfil-config-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #1c1c1c; /* Fundo um pouco mais claro que o container principal */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    text-align: center;
+}
+
+.config-card h2 {
+    font-size: 2rem;
+    color: #FFF;
+    margin-bottom: 2.5rem;
+}
+
+.config-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group-config {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.form-group-config label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #E5E5E5;
+    font-weight: bold;
+}
+
+.form-group-config input[type="text"],
+.form-group-config select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #FFF;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group-config input[type="text"]::placeholder {
+    color: #888;
+}
+
+.form-group-config input[type="text"]:focus,
+.form-group-config select:focus {
+    border-color: #C8F7A6; /* Borda verde no foco */
+}
+
+/* Estilo para upload de foto */
+.foto-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.foto-upload img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover;
+    border: 2px solid #555;
+}
+
+.foto-upload input[type="file"] {
+    display: none; /* Esconde o input de arquivo padrão */
+}
+
+.btn-upload-foto {
+    background-color: #376C3A; /* Verde escuro */
+    color: #FFF;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-upload-foto:hover {
+    background-color: #C8F7A6; /* Verde claro no hover */
+    color: #141414;
+}
+
+.form-actions-config {
+    display: flex;
+    justify-content: flex-end; /* Alinha botões à direita */
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-cancelar,
+.btn-salvar {
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none; /* Para routerLink */
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-cancelar {
+    background: none;
+    border: 1px solid #888;
+    color: #E5E5E5;
+}
+
+.btn-cancelar:hover {
+    border-color: #C8F7A6;
+    color: #C8F7A6;
+}
+
+.btn-salvar {
+    background-color: #376C3A; /* Verde principal */
+    border: 1px solid #376C3A;
+    color: #FFF;
+}
+
+.btn-salvar:hover {
+    background-color: #C8F7A6;
+    border-color: #C8F7A6;
+    color: #141414;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .perfil-config-container {
+        padding: 2rem;
+    }
+
+    .config-card h2 {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-actions-config {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .btn-cancelar, .btn-salvar {
+        width: 100%;
+    }
+}
