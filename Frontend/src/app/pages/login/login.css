@@ -140,7 +140,6 @@
     color: var(--eco-green-light);
 }
 
-/* ensure anchor and button with this class look the same */
 button.action-link {
     -webkit-appearance: none;
     -moz-appearance: none;

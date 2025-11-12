@@ -22,17 +22,17 @@
 .sobre-container {
   max-width: 1000px;
   margin: 0 auto;
-  background: transparent; /* removed card background */
-  border-radius: 0; /* remove card corners */
-  padding: 0; /* rely on page padding */
-  box-shadow: none; /* remove elevation */
+  background: transparent; 
+  border-radius: 0; 
+  padding: 0; 
+  box-shadow: none; 
   font-family: Arial, sans-serif;
 }
 
 .sobre-header h1 {
   margin: 0 0 8px 0;
   font-size: 2rem;
-  color: var(--eco-white); /* heading visible on green background */
+  color: var(--eco-white); 
 }
 
 .lead {
@@ -63,7 +63,7 @@
 
 .sobre-section {
   margin: 18px 0;
-  background: rgba(255,255,255,0.95); /* make sections white for readability */
+  background: rgba(255,255,255,0.95); 
   padding: 18px 20px;
   border-radius: 8px;
 }
