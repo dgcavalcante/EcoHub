@@ -127,10 +127,24 @@
     color: var(--eco-white);
     text-decoration: none;
     transition: color 0.3s ease;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .action-link:hover {
     color: var(--eco-green-light);
+}
+
+/* ensure anchor and button with this class look the same */
+button.action-link {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .btn-login-right,

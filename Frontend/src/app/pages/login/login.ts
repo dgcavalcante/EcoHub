@@ -10,5 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './login.css',
 })
 export class Login {
-
+  // Clear the password input. Kept simple to avoid adding ViewChild.
+  clearPassword(): void {
+    const el = document.getElementById('login-password') as HTMLInputElement | null;
+    if (el) {
+      el.value = '';
+    }
+  }
 }

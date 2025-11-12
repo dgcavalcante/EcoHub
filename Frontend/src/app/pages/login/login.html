@@ -19,12 +19,12 @@
                 </div>
 
                 <div class="login-actions">
-                    <a href="#" class="action-link">LIMPAR SENHA</a>
-                    <a href="#" class="action-link">ESQUECEU A SENHA?</a>
+                    <button type="button" class="action-link" (click)="clearPassword()">LIMPAR SENHA</button>
+                    <a routerLink="/recuperar-senha" class="action-link">ESQUECEU A SENHA?</a>
                 </div>
 
                 <button type="submit" class="btn-login-right">ENTRAR</button>
-                <button type="button" class="btn-cadastro-right">CADASTRE-SE</button>
+                <button type="button" class="btn-cadastro-right" routerLink="/cadastro">CADASTRE-SE</button>
             </form>
         </div>
     </div>
