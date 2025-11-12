@@ -1,5 +1,4 @@
-/* Variáveis de Cor (Baseadas no design) */
-:host {
+:host{
     --eco-green-dark: #376C3A;
     --eco-green-light: #C8F7A6;
     --eco-bg-light: #E8F5E9;
@@ -20,7 +19,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--eco-bg-light); /* Fundo claro */
+    background-color: var(--eco-bg-light); 
     padding: 2rem;
     box-sizing: border-box;
 }

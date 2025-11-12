@@ -1,14 +1,13 @@
-/* Variáveis de Cor (Baseadas no seu design) */
 :host {
     --eco-green-dark: #376C3A;
     --eco-green-light: #C8F7A6;
-    --eco-bg-light: #E8F5E9; /* Fundo claro da área de conteúdo */
+    --eco-bg-light: #E8F5E9; 
     --eco-text-dark: #1A340F;
     --eco-text-light: #F0F0F0;
-    --eco-text-gray: #6B7280; /* Cinza para subtextos */
+    --eco-text-gray: #6B7280; 
     --eco-white: #FFFFFF;
-    --eco-border: #D1D5DB; /* Cor suave para bordas e linhas */
-    --eco-alert: #EF4444; /* Vermelho para alertas */
+    --eco-border: #D1D5DB; 
+    --eco-alert: #EF4444; 
 
     display: flex;
     font-family: Arial, sans-serif;
@@ -22,9 +21,8 @@
     height: 100%;
 }
 
-/* Barra Lateral */
 .sidebar {
-    flex: 0 0 260px; /* Largura fixa da barra lateral */
+    flex: 0 0 260px; 
     background-color: var(--eco-green-dark);
     color: var(--eco-text-light);
     padding: 1.5rem;
@@ -38,9 +36,9 @@
 }
 
 .sidebar-logo img {
-    width: 100px; /* Ajuste o tamanho do seu logo */
+    width: 100px; 
     height: auto;
-    filter: brightness(0) invert(1); /* Deixa o logo PNG branco */
+    filter: brightness(0) invert(1); 
 }
 
 .sidebar-nav ul {
@@ -80,9 +78,8 @@
     font-weight: bold;
 }
 
-/* Rodapé da Barra Lateral */
 .sidebar-footer {
-    margin-top: auto; /* Empurra para o final */
+    margin-top: auto; 
 }
 
 .sidebar-footer a {
@@ -105,15 +102,13 @@
     margin-right: 1rem;
 }
 
-/* Conteúdo Principal */
 .main-content {
     flex: 1;
     background-color: var(--eco-bg-light);
     padding: 2rem 3rem;
-    overflow-y: auto; /* Permite rolar o conteúdo principal */
+    overflow-y: auto; 
 }
 
-/* Cabeçalho do Conteúdo */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -146,7 +141,6 @@
     height: 24px;
 }
 
-/* Boas-Vindas */
 .welcome-header h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -159,7 +153,6 @@
     margin-top: 0.25rem;
 }
 
-/* Card Principal */
 .main-summary-card {
     background-color: var(--eco-white);
     border-radius: 12px;
@@ -193,8 +186,7 @@
 .summary-comparison {
     display: block;
     margin-top: 0.5rem;
-    color: var(--eco-green-dark); /* Positivo */
-    /* color: var(--eco-alert); */ /* Negativo */
+    color: var(--eco-green-dark); 
     font-weight: 500;
 }
 
@@ -202,7 +194,6 @@
     color: var(--eco-green-dark);
 }
 
-/* Grid de Estatísticas */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -247,13 +238,12 @@
     text-decoration: underline;
 }
 
-/* Card de Alerta */
 .stat-card.alert .stat-value,
 .stat-card.alert .stat-subtext {
     color: var(--eco-alert);
 }
 
-/* Recomendações */
+
 .recommendations-section {
     margin-top: 2rem;
 }

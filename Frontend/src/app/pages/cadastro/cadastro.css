@@ -1,4 +1,3 @@
-/* Variáveis de Cor (Mesmas do Login) */
 :host {
     --eco-green-light: #C8F7A6; 
     --eco-green-dark: #376C3A;  
@@ -8,19 +7,17 @@
     --eco-input-border: #9CD17D; 
 
     display: block;
-    min-height: 100vh; /* MUDADO: De height para min-height */
+    min-height: 100vh;
     font-family: Arial, sans-serif;
-    /* REMOVIDO: overflow: hidden; */
 }
 
-/* Estrutura principal */
+
 .cadastro-split-container {
     display: flex;
     min-height: 100vh;
     color: var(--eco-white);
 }
 
-/* Painel Esquerdo (Logo) */
 .cadastro-left-panel {
     flex: 1;
     background-color: var(--eco-green-light);
@@ -41,7 +38,7 @@
     height: auto; 
 }
 
-/* Painel Direito (Formulário) */
+
 .cadastro-right-panel {
     flex: 1; 
     background-color: var(--eco-green-dark);
@@ -50,14 +47,12 @@
     align-items: center;
     padding: 20px;
     box-sizing: border-box; 
-    /* REMOVIDO: overflow-y: auto; (Agora a página inteira rola) */
 }
 
 .cadastro-content {
     width: 100%;
     max-width: 350px; 
     text-align: center;
-    /* MUDADO: Garante padding em cima e embaixo */
     padding: 3rem 0; 
 }
 
@@ -71,10 +66,9 @@
 .cadastro-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Espaço entre os grupos de campos */
+    gap: 1.5rem; 
 }
 
-/* Estilo do Formulário (Label Flutuante) */
 .form-group {
     position: relative;
     margin-bottom: 1rem;
@@ -92,7 +86,6 @@
     transition: border-color 0.3s ease;
 }
 
-/* Estilo para o input de data não mostrar o ícone de calendário */
 .form-group input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
 }
@@ -125,7 +118,6 @@
     color: var(--eco-white);
 }
 
-/* Botão Final de Cadastro */
 .btn-cadastrar-final {
     width: 100%;
     padding: 0.8rem 1.5rem;
@@ -135,7 +127,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-top: 1rem; /* Espaço antes do botão */
+    margin-top: 1rem; 
     
     background-color: var(--eco-green-light);
     color: var(--eco-text-dark);

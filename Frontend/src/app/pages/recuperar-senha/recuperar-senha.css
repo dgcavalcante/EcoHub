@@ -1,4 +1,3 @@
-/* Variáveis de Cor (Mesmas do Login) */
 :host {
     --eco-green-light: #C8F7A6; 
     --eco-green-dark: #376C3A;  
@@ -13,14 +12,13 @@
     overflow: hidden; 
 }
 
-/* Estrutura principal (idêntica ao login) */
 .recover-split-container {
     display: flex;
     min-height: 100vh;
     color: var(--eco-white);
 }
 
-/* Painel Esquerdo (Logo) */
+
 .recover-left-panel {
     flex: 1;
     background-color: var(--eco-green-light);
@@ -41,7 +39,6 @@
     height: auto; 
 }
 
-/* Painel Direito (Formulário) */
 .recover-right-panel {
     flex: 1; 
     background-color: var(--eco-green-dark);
@@ -67,7 +64,7 @@
 
 .recover-instructions {
     font-size: 1rem;
-    color: var(--eco-input-border); /* Cor clara, mas não branca */
+    color: var(--eco-input-border); 
     margin: 0 auto 2.5rem auto;
     max-width: 300px;
     line-height: 1.5;
@@ -79,7 +76,6 @@
     gap: 1.5rem; 
 }
 
-/* Estilo do Formulário (Label Flutuante) */
 .form-group {
     position: relative;
     margin-bottom: 1rem;
@@ -124,7 +120,6 @@
     color: var(--eco-white);
 }
 
-/* Botão Enviar */
 .btn-enviar {
     width: 100%;
     padding: 0.8rem 1.5rem;
@@ -145,7 +140,6 @@
     color: var(--eco-white);
 }
 
-/* Link de Voltar */
 .back-to-login {
     display: block;
     margin-top: 1.5rem;

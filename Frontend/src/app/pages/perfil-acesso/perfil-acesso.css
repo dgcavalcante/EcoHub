@@ -1,13 +1,9 @@
-/* CSS para a tela de Perfis de Acesso (Netflix-style).
-  Coloque-o em 'perfil-acesso.component.css'
-*/
-
 :host {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    min-height: 100vh; /* Ocupa a altura total da viewport */
-    background-color: #141414; /* Fundo escuro similar à Netflix */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-color: #141414; 
     font-family: 'Arial', sans-serif;
     color: #E5E5E5;
     box-sizing: border-box;
@@ -16,21 +12,21 @@
 .perfil-acesso-container {
     text-align: center;
     padding: 2rem;
-    max-width: 90%; /* Limita a largura para telas grandes */
+    max-width: 90%; 
 }
 
 .perfil-header h1 {
-    font-size: 3.5rem; /* Tamanho grande para o título */
+    font-size: 3.5rem; 
     font-weight: 500;
     margin-bottom: 3rem;
-    color: #FFF; /* Título branco */
+    color: #FFF; 
 }
 
 .perfis-grid {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 2rem; /* Espaçamento entre os cards */
+    gap: 2rem; 
     margin-bottom: 3rem;
 }
 
@@ -38,19 +34,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none; /* Remove sublinhado dos links */
+    text-decoration: none; 
     color: #E5E5E5;
     transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
-    width: 180px; /* Largura fixa para os cards */
+    width: 180px; 
 }
 
 .perfil-card img {
-    width: 180px; /* Tamanho da imagem do perfil */
+    width: 180px; 
     height: 180px;
-    border-radius: 4px; /* Levemente arredondado */
-    object-fit: cover; /* Garante que a imagem preencha o espaço */
-    border: 3px solid transparent; /* Borda transparente inicial */
+    border-radius: 4px; 
+    object-fit: cover; 
+    border: 3px solid transparent; 
     transition: border-color 0.3s ease;
 }
 
@@ -61,20 +57,18 @@
     transition: color 0.3s ease;
 }
 
-/* Efeito hover nos cards */
 .perfil-card:hover {
-    transform: scale(1.05); /* Leve aumento no hover */
+    transform: scale(1.05); 
 }
 
 .perfil-card:hover img {
-    border-color: #C8F7A6; /* Borda verde claro no hover */
+    border-color: #C8F7A6; 
 }
 
 .perfil-card:hover .perfil-nome {
-    color: #C8F7A6; /* Nome verde claro no hover */
+    color: #C8F7A6; 
 }
 
-/* Estilo para o card de adicionar perfil */
 .add-perfil {
     background-color: transparent;
 }
@@ -82,34 +76,33 @@
 .add-perfil .add-icon {
     width: 180px;
     height: 180px;
-    background-color: #333; /* Fundo cinza escuro para o + */
+    background-color: #333; 
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    border: 3px solid transparent; /* Borda transparente inicial */
+    border: 3px solid transparent; 
 }
 
 .add-perfil .add-icon svg {
-    color: #E5E5E5; /* Cor do + */
+    color: #E5E5E5; 
     transition: color 0.3s ease;
 }
 
 .add-perfil:hover .add-icon {
-    background-color: #444; /* Um pouco mais claro no hover */
-    border-color: #C8F7A6; /* Borda verde claro no hover */
+    background-color: #444; 
+    border-color: #C8F7A6; 
 }
 
 .add-perfil:hover .add-icon svg {
-    color: #C8F7A6; /* + verde claro no hover */
+    color: #C8F7A6; 
 }
 
 .add-perfil .perfil-nome {
     color: #E5E5E5;
 }
 
-/* Botão de Gerenciar Perfis (se você decidir usar) */
 .btn-gerenciar-perfis {
     background: none;
     border: 1px solid #E5E5E5;
@@ -126,8 +119,6 @@
     color: #141414;
     border-color: #E5E5E5;
 }
-
-/* Responsividade */
 @media (max-width: 768px) {
     .perfil-header h1 {
         font-size: 2.5rem;
