@@ -47,7 +47,10 @@ public class UserService {
         if (!passwordEncoder.matches(senha, user.getSenha())) {
             throw new RuntimeException("Senha incorreta!");
         }
-
         return user;
+    }
+    
+    public boolean validarEmail(String email) {
+    	return userRepository.existsByEmail(email);
     }
 }

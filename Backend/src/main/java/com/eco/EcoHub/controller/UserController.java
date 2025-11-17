@@ -19,17 +19,6 @@ public class UserController {
     @Autowired
     private EmailService emailService;
     
-    // ENDPOINT: Recuperar senha
-    @PostMapping("/recuperar-senha")
-    public ResponseEntity<?> recuperarSenha(@RequestBody @Valid EmailDTO emailDTO) {
-    	try {
-    		emailService.sendEmail(emailDTO.getEmail(), "Recuperação de senha", "Olá, você solicitou a recuperação de senha. Clique no link para redefinir sua senha:");
-        	return ResponseEntity.ok("Email enviado com sucesso!");
-    	} catch (RuntimeException e) {
-    		return ResponseEntity.badRequest().body(e.getMessage());
-    	}
-    }
-
     // ENDPOINT: Cadastro
     @PostMapping("/cadastro")
     public ResponseEntity<?> cadastrar(@Valid @RequestBody User user) {
@@ -50,5 +39,21 @@ public class UserController {
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
+    }
+  
+    // ENDPOINT: Recuperar senha
+    @PostMapping("/recuperar-senha")
+    public ResponseEntity<?> recuperarSenha(@RequestBody @Valid EmailDTO emailDTO) {
+    	try {
+    		boolean exist = userService.validarEmail(emailDTO.getEmail());
+    		if(exist) {
+    			emailService.sendEmail(emailDTO.getEmail(), "Recuperação de senha", "Olá, você solicitou a recuperação de senha. Clique no link para redefinir sua senha:");
+            	return ResponseEntity.ok("Email enviado com sucesso!");
+    		} else {
+    			return ResponseEntity.badRequest().body("E-mail não cadastrado!");
+    		}
+    	} catch (RuntimeException e) {
+    		return ResponseEntity.badRequest().body(e.getMessage());
+    	}
     }
 }
