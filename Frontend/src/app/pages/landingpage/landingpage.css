@@ -1,13 +1,11 @@
-/* Variáveis de Cor (Baseadas no seu design) */
 :host {
     --eco-green-dark: #376C3A;
     --eco-green-light: #C8F7A6;
     --eco-text-dark: #1A340F;
     --eco-white: #FFFFFF;
-    --eco-bg-light-gray: #f9f9f9; /* Fundo suave para seções */
+    --eco-bg-light-gray: #f9f9f9; 
     --eco-text-gray: #555;
     
-    /* Configuração do Host */
     display: block;
     font-family: Arial, sans-serif;
     color: var(--eco-text-gray);
@@ -18,7 +16,6 @@
     width: 100%;
 }
 
-/* Cabeçalho */
 .landing-header {
     display: flex;
     justify-content: space-between;
@@ -42,7 +39,6 @@
     width: 35px;
     height: auto;
     margin-right: 10px;
-    /* Filtro para fazer o logo PNG ficar branco */
     filter: brightness(0) invert(1); 
 }
 
@@ -97,7 +93,7 @@
 .btn-signup {
     background-color: var(--eco-green-light);
     border: 2px solid var(--eco-green-light);
-    color: var(--eco-text-dark); /* Texto escuro no botão claro */
+    color: var(--eco-text-dark); 
 }
 
 .btn-signup:hover {
@@ -106,7 +102,6 @@
     color: var(--eco-green-dark);
 }
 
-/* Seção Hero */
 .hero-section {
     display: flex;
     align-items: center;
@@ -151,7 +146,7 @@
 }
 
 .btn-get-started:hover {
-    background-color: var(--eco-text-dark); /* Um pouco mais escuro */
+    background-color: var(--eco-text-dark);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -167,7 +162,7 @@
     border-radius: 10px;
 }
 
-/* Seção de Recursos */
+
 .features-section {
     padding: 5rem 5%;
     text-align: center;
@@ -207,7 +202,6 @@
     border-radius: 50%;
     background-color: var(--eco-green-light);
     margin: 0 auto 1.5rem auto;
-    /* Placeholder - adicione seu ícone SVG aqui */
     border: 2px solid var(--eco-green-dark);
 }
 
@@ -222,7 +216,7 @@
     color: var(--eco-text-gray);
 }
 
-/* Rodapé */
+
 .landing-footer {
     text-align: center;
     padding: 2.5rem 5%;
@@ -231,7 +225,6 @@
     margin-top: 2rem;
 }
 
-/* Media Query para telas menores */
 @media (max-width: 768px) {
     .landing-header {
         flex-direction: column;

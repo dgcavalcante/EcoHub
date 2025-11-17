@@ -1,34 +1,26 @@
-/* Variáveis de Cor (Extraídas da sua imagem) 
-   Movidas para :host para garantir o escopo do componente Angular
-*/
 :host {
-    --eco-green-light: #C8F7A6; /* Verde claro do painel esquerdo */
-    --eco-green-dark: #376C3A;  /* Verde escuro do painel direito e textos */
-    --eco-text-dark: #1A340F;   /* Texto do logo e subtítulo */
+    --eco-green-light: #C8F7A6; 
+    --eco-green-dark: #376C3A;  
+    --eco-text-dark: #1A340F;  
     --eco-white: #FFFFFF;
-    --eco-button-hover: #528B55; /* Verde para hover dos botões */
-    --eco-input-border: #9CD17D; /* Borda dos inputs */
+    --eco-button-hover: #528B55; 
+    --eco-input-border: #9CD17D; 
 
-    /* Reset Básico e Estilos de Corpo 
-       Em Angular, 'html, body' geralmente vão em 'styles.css' global.
-       Colocando ':host' aqui para aplicar ao componente.
-    */
     display: block;
-    height: 100vh; /* Garante que o componente ocupe a altura total */
+    height: 100vh; 
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Evita barras de rolagem na tela cheia */
+    overflow: hidden; 
 }
 
-/* Container Principal (Duas Colunas) */
+
 .login-split-container {
     display: flex;
     min-height: 100vh;
     color: var(--eco-white);
 }
 
-/* Painel Esquerdo (Logo) */
 .login-left-panel {
-    flex: 1; /* Ocupa metade da largura */
+    flex: 1; 
     background-color: var(--eco-green-light);
     display: flex;
     justify-content: center;
@@ -43,30 +35,30 @@
 }
 
 .ecohub-logo-img {
-    width: 450px; /* Aumentei o tamanho aqui! */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+    width: 450px; 
+    height: auto; 
+    margin-bottom: 10px; 
 }
 
 .login-right-panel {
-    flex: 1; /* Ocupa a outra metade da largura */
+    flex: 1; 
     background-color: var(--eco-green-dark);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    box-sizing: border-box; /* Garante que o padding não estoure */
+    box-sizing: border-box; 
 }
 
 .login-content {
     width: 100%;
-    max-width: 350px; /* Largura máxima do formulário */
+    max-width: 350px; 
     text-align: center;
 }
 
 .login-content h3 {
     font-size: 1.8rem;
-    margin-bottom: 3rem; /* Espaçamento abaixo do título */
+    margin-bottom: 3rem; 
     color: var(--eco-white);
     font-weight: normal;
 }
@@ -74,10 +66,10 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Espaçamento entre os grupos de formulário */
+    gap: 1.5rem; 
 }
 
-/* Estilo do Formulário (Label Flutuante) */
+
 .form-group {
     position: relative;
     margin-bottom: 1rem;
@@ -88,7 +80,7 @@
     padding: 0.5rem 0.2rem;
     background: none;
     border: none;
-    border-bottom: 2px solid var(--eco-input-border); /* Linha como na imagem */
+    border-bottom: 2px solid var(--eco-input-border); 
     color: var(--eco-white);
     font-size: 1.1rem;
     outline: none;
@@ -96,7 +88,7 @@
 }
 
 .form-group input:focus {
-    border-bottom-color: var(--eco-white); /* Linha branca ao focar */
+    border-bottom-color: var(--eco-white); 
 }
 
 .form-group label {
@@ -109,7 +101,6 @@
     transition: all 0.3s ease;
 }
 
-/* Animação da Label */
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label {
     top: -1.2rem;
@@ -117,7 +108,6 @@
     color: var(--eco-white);
 }
 
-/* Fallback para navegadores que não suportam :placeholder-shown */
 .form-group input:not([value=""]) + label {
     top: -1.2rem;
     font-size: 0.8rem;
@@ -137,24 +127,36 @@
     color: var(--eco-white);
     text-decoration: none;
     transition: color 0.3s ease;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .action-link:hover {
     color: var(--eco-green-light);
 }
 
-/* Botões */
+button.action-link {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .btn-login-right,
 .btn-cadastro-right {
     width: 100%;
     padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 5px; /* Bordas levemente arredondadas */
+    border-radius: 5px; 
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-bottom: 1rem; /* Espaçamento entre os botões */
+    margin-bottom: 1rem; 
 }
 
 .btn-login-right {
@@ -169,7 +171,7 @@
 
 .btn-cadastro-right {
     background-color: transparent;
-    border: 2px solid var(--eco-white); /* Borda branca */
+    border: 2px solid var(--eco-white); 
     color: var(--eco-white);
 }
 

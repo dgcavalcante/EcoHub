@@ -1,13 +1,9 @@
-/* CSS para a tela de Configuração de Perfil.
-  Coloque-o em 'perfil-configuracao.component.css'
-*/
-
 :host {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #141414; /* Mantém o fundo escuro consistente */
+    background-color: #141414; 
     font-family: 'Arial', sans-serif;
     color: #E5E5E5;
     box-sizing: border-box;
@@ -17,7 +13,7 @@
 .perfil-config-container {
     width: 100%;
     max-width: 500px;
-    background-color: #1c1c1c; /* Fundo um pouco mais claro que o container principal */
+    background-color: #1c1c1c; 
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     padding: 3rem;
@@ -69,10 +65,9 @@
 
 .form-group-config input[type="text"]:focus,
 .form-group-config select:focus {
-    border-color: #C8F7A6; /* Borda verde no foco */
+    border-color: #C8F7A6; 
 }
 
-/* Estilo para upload de foto */
 .foto-upload {
     display: flex;
     flex-direction: column;
@@ -83,17 +78,17 @@
 .foto-upload img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Foto circular */
+    border-radius: 50%; 
     object-fit: cover;
     border: 2px solid #555;
 }
 
 .foto-upload input[type="file"] {
-    display: none; /* Esconde o input de arquivo padrão */
+    display: none; 
 }
 
 .btn-upload-foto {
-    background-color: #376C3A; /* Verde escuro */
+    background-color: #376C3A; 
     color: #FFF;
     padding: 0.7rem 1.5rem;
     border: none;
@@ -104,13 +99,13 @@
 }
 
 .btn-upload-foto:hover {
-    background-color: #C8F7A6; /* Verde claro no hover */
+    background-color: #C8F7A6; 
     color: #141414;
 }
 
 .form-actions-config {
     display: flex;
-    justify-content: flex-end; /* Alinha botões à direita */
+    justify-content: flex-end; 
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -122,7 +117,7 @@
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
-    text-decoration: none; /* Para routerLink */
+    text-decoration: none; 
     display: inline-block;
     text-align: center;
     transition: all 0.3s ease;
@@ -140,7 +135,7 @@
 }
 
 .btn-salvar {
-    background-color: #376C3A; /* Verde principal */
+    background-color: #376C3A; 
     border: 1px solid #376C3A;
     color: #FFF;
 }
@@ -151,7 +146,7 @@
     color: #141414;
 }
 
-/* Responsividade */
+
 @media (max-width: 600px) {
     .perfil-config-container {
         padding: 2rem;

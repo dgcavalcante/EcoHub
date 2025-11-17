@@ -1,0 +1,104 @@
+:host {
+    --eco-green-dark: #376C3A;
+    --eco-green-light: #C8F7A6;
+    --eco-text-light: #F0F0F0;
+    --eco-text-dark: #1A340F;
+    --eco-white: #FFFFFF;
+    --eco-bg-light-gray: #f9f9f9; 
+    --eco-text-gray: #555;
+    
+    display: block;
+    font-family: Arial, sans-serif;
+    color: var(--eco-text-gray);
+    line-height: 1.6;
+}
+
+.sobre-page {
+  min-height: 100vh;
+  background: var(--eco-green-dark); 
+  box-sizing: border-box;
+}
+
+.sobre-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: transparent; 
+  border-radius: 0; 
+  padding: 0; 
+  box-shadow: none; 
+  font-family: Arial, sans-serif;
+}
+
+.sobre-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  color: var(--eco-white); 
+}
+
+.lead {
+  color: var(--eco-text-light);
+  margin: 4px 0 18px 0;
+}
+
+.external-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.ext-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--eco-green-dark);
+  color: var(--eco-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.ext-btn:hover{opacity:0.95}
+
+.sobre-section {
+  margin: 18px 0;
+  background: rgba(255,255,255,0.95); 
+  padding: 18px 20px;
+  border-radius: 8px;
+}
+
+.sobre-section h3 {
+  margin-top: 0;
+  color: var(--eco-green-dark);
+}
+
+.telas-exemplos {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.tela-card {
+  background: white;
+  border: 1px solid #e6f1e4;
+  padding: 12px;
+  border-radius: 6px;
+  flex: 1 1 0;
+  text-align: center;
+  color: var(--eco-green-dark);
+}
+
+.sobre-footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.btn-voltar {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--eco-green-dark);
+  color: var(--eco-white);
+  text-decoration: none;
+  border-radius: 6px;
+}

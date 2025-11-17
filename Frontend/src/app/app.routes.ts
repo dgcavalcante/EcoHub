@@ -14,6 +14,7 @@ import { RecuperarSenha } from './pages/recuperar-senha/recuperar-senha';
 import { EditarPerfil } from './pages/editar-perfil/editar-perfil';
 import { PaginaNaoEncontrada } from './pages/pagina-nao-encontrada/pagina-nao-encontrada';
 import { AdicionarPerfil } from './pages/adicionar-perfil/adicionar-perfil';
+import { Sobre } from './pages/sobre/sobre';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'landingpage', pathMatch: 'full' },
@@ -25,12 +26,12 @@ export const routes: Routes = [
   { path: 'gerar-relatorios', component: GerarRelatorios },
   { path: 'analise-consumo', component: AnaliseConsumo },
   { path: 'monitoramento-desperdicio', component: MonitoramentoDesperdicio },
-  { path: 'monitoramento-desperdicio', component: MonitoramentoDesperdicio },
   { path: 'relatorios-detalhados', component: RelatoriosDetalhados },
   { path: 'recomendacao-consumo', component: RecomendacaoConsumo },
   { path: 'perfil-acesso', component: PerfilAcesso },
   { path: 'recuperar-senha', component: RecuperarSenha },
   { path: 'editar-perfil', component: EditarPerfil },
   { path: 'adicionar-perfil', component: AdicionarPerfil },
+  { path: 'sobre', component: Sobre },
   { path: '**', component: PaginaNaoEncontrada }, 
 ];
