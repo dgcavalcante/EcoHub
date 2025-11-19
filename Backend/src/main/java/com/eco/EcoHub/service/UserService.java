@@ -39,6 +39,15 @@ public class UserService {
 
         return userRepository.save(user);
     }
+    
+    public User salvar(User user) {
+		return userRepository.save(user);
+	}
+    
+    public User listarUsuarioPorCpf(String cpf) {
+		return userRepository.findByCpf(cpf)
+				.orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
+	}
 
     public User autenticar(String email, String senha) {
         var user = userRepository.findByEmail(email)
@@ -49,6 +58,10 @@ public class UserService {
         }
         return user;
     }
+    
+    public Iterable<User> listarUsuarios() {
+		return userRepository.findAll();
+	}
     
     public boolean validarEmail(String email) {
     	return userRepository.existsByEmail(email);

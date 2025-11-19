@@ -10,7 +10,6 @@
     @Entity
     @Table(name = "Users")
     public class User {
-
         @Id
         @GeneratedValue(strategy = GenerationType.UUID)
         private UUID idUser;
