@@ -17,7 +17,7 @@
         @NotBlank(message = "O nome completo é obrigatório")
         private String nomeCompleto;
 
-
+		@NotBlank(message = "O CPF é obrigatório")
         @Column(unique = true)
         private String cpf;
 

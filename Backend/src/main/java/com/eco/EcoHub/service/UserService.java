@@ -2,6 +2,9 @@ package com.eco.EcoHub.service;
 
 import com.eco.EcoHub.entity.User;
 import com.eco.EcoHub.repository.UserRepository;
+
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -44,10 +47,20 @@ public class UserService {
 		return userRepository.save(user);
 	}
     
+    public User encontrarUsuarioPorID(UUID id) {
+    	return userRepository.findByIdUser(id)
+    			.orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
+    }
+    
     public User listarUsuarioPorCpf(String cpf) {
 		return userRepository.findByCpf(cpf)
 				.orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
 	}
+    
+    public User listarUsuarioPorEmail(String email) {
+    	return userRepository.findByEmail(email)
+				.orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));
+    }
 
     public User autenticar(String email, String senha) {
         var user = userRepository.findByEmail(email)
@@ -66,4 +79,16 @@ public class UserService {
     public boolean validarEmail(String email) {
     	return userRepository.existsByEmail(email);
     }
+    
+    public boolean verificarSenha(String senha, String confirmarSenha) {
+    	if (!senha.equals(confirmarSenha)) {
+			return false;
+		} else {
+			return true;
+		}
+    }
+
+	public void deletarUsuario(User usuarioExistente) {
+		userRepository.delete(usuarioExistente);
+	}
 }
