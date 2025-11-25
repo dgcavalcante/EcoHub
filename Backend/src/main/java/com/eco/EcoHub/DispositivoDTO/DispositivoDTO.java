@@ -10,9 +10,7 @@ public class DispositivoDTO {
 	private String nome;
 	@NotBlank(message = "O tipo do dispositivo é obrigatório.")
 	private String tipo;
-	@NotBlank(message = "O consumo por hora do dispositivo é obrigatório.")
 	private BigDecimal consumoPorHora;
-	@NotBlank(message = "O status do dispositivo é obrigatório.")
 	private boolean statusDispositivo;
 	public String getNome() {
 		return nome;

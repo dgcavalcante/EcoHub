@@ -1,5 +1,7 @@
 package com.eco.EcoHub.controller;
 
+import java.math.BigDecimal;
+import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +60,25 @@ public class DispositivoController {
 	    try {
 	        dispositivoService.deletarDispositivo(id);
 	        return ResponseEntity.ok("Dispositivo deletado com sucesso!");
+	    } catch (RuntimeException e) {
+	        return ResponseEntity.badRequest().body(e.getMessage());
+	    }
+	}
+	@PostMapping("/injetarDados/{id}/{mes}/{quantidadeHoras}")
+	public ResponseEntity<?> injetarDadosConsumo(@PathVariable UUID id, @PathVariable int mes, @PathVariable int quantidadeHoras) {
+	    try {
+	        dispositivoService.injetarDadosConsumo(id, mes, quantidadeHoras);
+	        return ResponseEntity.ok("Dados de consumo injetados com sucesso!");
+	    } catch (RuntimeException e) {
+	        return ResponseEntity.badRequest().body(e.getMessage());
+	    }
+	}
+	
+	@GetMapping("/relatorioTotal/{id}")
+	public ResponseEntity<?> gerarRelatorioTotal(@PathVariable UUID id) {
+	    try {
+	    	Map<String, BigDecimal> relatorio = dispositivoService.pegarRelatorioTotal(id);
+	        return ResponseEntity.ok(relatorio);
 	    } catch (RuntimeException e) {
 	        return ResponseEntity.badRequest().body(e.getMessage());
 	    }
