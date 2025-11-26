@@ -1,15 +1,16 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+
 <div class="landing-page-container">
     
     <header class="landing-header">
         <div class="logo-container" routerLink="/">
             <img src="ecohub-logo.png" alt="Logo EcoHub" class="header-logo-img">
-            <span>EcoHub</span>
         </div>
         <nav class="landing-nav">
             <a href="#features">Recursos</a>
-            <a routerLink="/sobre">Sobre</a>
+            <a href="#about">Sobre</a>
             <a href="#contact">Contato</a>
-        </nav>
+            </nav>
         <div class="landing-auth-buttons">
             <a routerLink="/login" class="btn-login">Login</a>
             <a routerLink="/cadastro" class="btn-signup">Cadastro</a>
@@ -23,7 +24,7 @@
             <a routerLink="/cadastro" class="btn-get-started">Comece Agora</a>
         </div>
         <div class="hero-image">
-            <img src="https://placehold.co/600x400/C8F7A6/1A340F?text=Ilustra%C3%A7%C3%A3o+EcoHub" alt="Ilustração EcoHub">
+            <img src="https://ecoassist.com.br/wp-content/uploads/elementor/thumbs/vecteezy_small-tree-growing-on-the-energy-saving-lamp-and_6671886_181-5-scaled-1-qbamtg8gd9my4ai1u25zacyrjbh0ckovka4tifd7jc.jpg" alt="Ilustração EcoHub">
         </div>
     </section>
 
@@ -32,29 +33,69 @@
         <div class="feature-grid">
             <div class="feature-item">
                 <div class="feature-icon">
-                    </div>
+                    <i class="material-icons">speed</i>
+                </div>
                 <h3>Monitoramento Inteligente</h3>
                 <p>Acompanhe seu consumo de energia em tempo real.</p>
             </div>
+
             <div class="feature-item">
-                <div class="feature-icon"></div>
+                <div class="feature-icon">
+                    <i class="material-icons">assessment</i>
+                </div>
                 <h3>Relatórios Detalhados</h3>
                 <p>Receba análises completas para otimizar seu uso.</p>
             </div>
+
             <div class="feature-item">
-                <div class="feature-icon"></div>
+                <div class="feature-icon">
+                    <i class="material-icons">notifications_active</i>
+                </div>
                 <h3>Alertas Personalizados</h3>
                 <p>Seja notificado sobre picos de consumo ou anomalias.</p>
             </div>
-             <div class="feature-item">
-                <div class="feature-icon"></div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="material-icons">eco</i>
+                </div>
                 <h3>Recomendações Verdes</h3>
                 <p>Dicas para economizar energia e reduzir sua pegada de carbono.</p>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="landing-footer">
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>Sobre o EcoHub</h2>
+            <p>Nossa missão é impulsionar a sustentabilidade e a eficiência energética através da tecnologia. Acreditamos que o monitoramento inteligente é a chave para um futuro mais verde. Desde 2020, ajudamos empresas e residências a economizar energia e reduzir sua pegada de carbono com dados precisos e insights acionáveis.</p>
+            <a href="#contact" class="btn-get-started">Fale Conosco</a>
+        </div>
+        <div class="about-stats">
+            <div class="stat-item">
+                <i class="material-icons">bolt</i>
+                <p>+50 MWh</p>
+                <span>Energia Economizada</span>
+            </div>
+            <div class="stat-item">
+                <i class="material-icons">groups</i>
+                <p>+1.000</p>
+                <span>Usuários Ativos</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-info-solo">
+            <h3>Informações de Contato</h3>
+            <p><i class="material-icons">mail</i> contato@ecohub.com.br</p>
+            <p><i class="material-icons">phone</i> (XX) XXXX-XXXX</p>
+            <p><i class="material-icons">location_on</i> Av. Sustentável, 123 - Cidade Verde</p>
+        </div>
+    </section>
+
+    <footer class="landing-footer">
         <p>&copy; 2025 EcoHub. Todos os direitos reservados.</p>
     </footer>
+
 </div>

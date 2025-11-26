@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-landingpage',
-  standalone: true,              // 👈 ESSA LINHA FAZ TODA A DIFERENÇA
+  standalone: true,
   imports: [RouterModule, CommonModule],
   templateUrl: './landingpage.html',
   styleUrl: './landingpage.css'
