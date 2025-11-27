@@ -14,6 +14,7 @@ import { RecuperarSenha } from './pages/recuperar-senha/recuperar-senha';
 import { EditarPerfil } from './pages/editar-perfil/editar-perfil';
 import { PaginaNaoEncontrada } from './pages/pagina-nao-encontrada/pagina-nao-encontrada';
 import { AdicionarPerfil } from './pages/adicionar-perfil/adicionar-perfil';
+import { AdicionarAparelhoComponent } from './pages/adicionar-aparelho/adicionar-aparelho';
 import { Sobre } from './pages/sobre/sobre';
 
 export const routes: Routes = [
@@ -32,6 +33,7 @@ export const routes: Routes = [
   { path: 'recuperar-senha', component: RecuperarSenha },
   { path: 'editar-perfil', component: EditarPerfil },
   { path: 'adicionar-perfil', component: AdicionarPerfil },
+   { path: 'adicionar-aparelho', component: AdicionarAparelhoComponent },
   { path: 'sobre', component: Sobre },
   { path: '**', component: PaginaNaoEncontrada }, 
 ];

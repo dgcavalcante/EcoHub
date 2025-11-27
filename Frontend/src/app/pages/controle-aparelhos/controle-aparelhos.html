@@ -63,6 +63,7 @@
     <main class="main-content">
         <header class="main-header">
             <h1>Controle de Aparelhos</h1>
+            
             <div class="header-icons">
                 <a routerLink="/perfil-acesso" class="user-profile-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
@@ -72,6 +73,15 @@
         
         <section class="section-header">
             <h2>Meus Dispositivos</h2>
+            <button class="btn-add" routerLink="/adicionar-aparelho">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Adicionar novo aparelho
+            </button>
         </section>
 
         <nav class="device-filters">

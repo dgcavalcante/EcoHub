@@ -1,0 +1,100 @@
+<div class="add-device-page-container">
+    
+    <header class="add-device-header">
+        <h1>Adicionar Novo Aparelho</h1>
+
+        <a routerLink="/controle-aparelhos" class="btn-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </a>
+    </header>
+
+    <div class="form-card">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06c.46-.46.59-1.14.33-1.82a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82L4.21 6.2a2 2 0 1 1 2.83-2.83l.06.06c.46.46 1.14.59 1.82.33H9a1.65 1.65 0 0 0 1-1V3a2 2 0 1 1 4 0v.09c0 .69.4 1.32 1 1.51.68.26 1.36.13 1.82-.33l.06-.06A2 2 0 0 1 21.7 6.2l-.06.06c-.46.46-.59 1.14-.33 1.82.26.68.94 1.14 1.63 1.14H22a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"></path>
+            </svg>
+            Detalhes e Configurações do Dispositivo
+        </h2>
+
+        <form (ngSubmit)="saveDevice()"> 
+            
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="name">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 7V4a1 1 0 0 1 1-1h3"></path>
+                            <path d="M20 7V4a1 1 0 0 0-1-1h-3"></path>
+                            <path d="M4 17v3a1 1 0 0 0 1 1h3"></path>
+                            <path d="M20 17v3a1 1 0 0 1-1 1h-3"></path>
+                            <rect x="4" y="7" width="16" height="10" rx="2"></rect>
+                        </svg>
+                        Nome do Dispositivo
+                    </label>
+
+                    <input type="text" id="name" placeholder="Ex: Geladeira, Lâmpada Sala"
+                    [(ngModel)]="newDevice.name" name="name" required>
+                </div>
+
+                <div class="form-group half-width">
+                    <label for="type">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+                            <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                            <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+                            <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+                        </svg>
+                        Tipo de Aparelho
+                    </label>
+
+                    <select id="type" [(ngModel)]="newDevice.type" name="type" required>
+                        <option value="" disabled selected>Selecione o tipo</option>
+                        <option value="lightbulb">Iluminação</option>
+                        <option value="ac_unit">Climatização</option>
+                        <option value="power">Tomada Inteligente</option>
+                        <option value="tv">Entretenimento</option>
+                        <option value="other">Outros</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Localização
+                    </label>
+
+                    <input type="text" id="location" placeholder="Ex: Cozinha, Quarto Principal"
+                    [(ngModel)]="newDevice.location" name="location" required>
+                </div>
+
+                <div class="form-group half-width">
+                    <label for="consumption">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8L21 8h-9z"></path>
+                        </svg>
+                        Consumo Estimado (Watts)
+                    </label>
+
+                    <input type="number" id="consumption" placeholder="Potência Máxima (W)" min="0"
+                    [(ngModel)]="newDevice.consumption" name="consumption" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Salvar e Ativar Aparelho
+            </button>
+
+        </form>
+    </div>
+</div>
