@@ -190,13 +190,14 @@
 
 .date-group {
     display: flex;
+    flex-wrap: wrap; 
     gap: 1rem;
 }
 
 .date-group .form-group {
-    flex: 1; 
+    flex: 1 1 calc(50% - 1rem); 
+    min-width: 0; 
 }
-
 .btn-gerar {
     background-color: var(--eco-green-dark);
     color: var(--eco-white);
