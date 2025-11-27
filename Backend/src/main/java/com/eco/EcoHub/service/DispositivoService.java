@@ -49,6 +49,18 @@ public class DispositivoService {
 		Map<String, BigDecimal> relatorio = dispositivo.relatorio();
 		return relatorio;
 	}
+	public Map<String, BigDecimal> pegarRelatorioMensal(UUID id, int mes) {
+		Dispositivo dispositivo = DispositivoRepository.findByIdDispositivo(id)
+	            .orElseThrow(() -> new RuntimeException("Dispositivo não encontrado com o ID: " + id));
+		Map<String, BigDecimal> relatorio = dispositivo.relatorioMensal(mes);
+		return relatorio;
+	}
+	public Map<String, BigDecimal> pegarRelatorioPersonalizado(UUID id, int mesInicial, int mesFinal) {
+		Dispositivo dispositivo = DispositivoRepository.findByIdDispositivo(id)
+	            .orElseThrow(() -> new RuntimeException("Dispositivo não encontrado com o ID: " + id));
+		Map<String, BigDecimal> relatorio = dispositivo.relatorioPersonalizado(mesInicial, mesFinal);
+		return relatorio;
+	}
 
 
 }

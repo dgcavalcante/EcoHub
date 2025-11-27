@@ -4,11 +4,13 @@
     import jakarta.validation.constraints.Email;
     import jakarta.validation.constraints.NotBlank;
 
-    import java.util.UUID;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 
 
     @Entity
-    @Table(name = "Users")
+    @Table(name = "Usuario")
     public class User {
         @Id
         @GeneratedValue(strategy = GenerationType.UUID)
@@ -31,6 +33,13 @@
         private String senha;
 
         private String confirmarSenha;
+        
+        @ManyToMany
+        @JoinTable(name = "usuario_perfil",
+        		joinColumns = @JoinColumn(name = "idUser"),
+				inverseJoinColumns = @JoinColumn(name = "idPerfil")
+        )
+        private Set<Perfil> usuarioPerfis = new HashSet<>();
 
 
         public UUID getIdUser() {

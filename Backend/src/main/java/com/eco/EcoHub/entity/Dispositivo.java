@@ -330,4 +330,92 @@ public class Dispositivo implements Serializable {
 		this.emUmComodo = emUmComodo;
 	}
 
+	public Map<String, BigDecimal> relatorioMensal(int mes) {
+		Map<String, BigDecimal> relatorioMensal = new LinkedHashMap<>();
+		switch (mes) {
+			case 1:
+				relatorioMensal.put("Janeiro", getConsumoJaneiro());
+				break;
+			case 2:
+				relatorioMensal.put("Fevereiro", getConsumoFevereiro());
+				break;
+			case 3:
+				relatorioMensal.put("Março", getConsumoMarco());
+				break;
+			case 4:
+				relatorioMensal.put("Abril", getConsumoAbril());
+				break;
+			case 5:
+				relatorioMensal.put("Maio", getConsumoMaio());
+				break;
+			case 6:
+				relatorioMensal.put("Junho", getConsumoJunho());
+				break;
+			case 7:
+				relatorioMensal.put("Julho", getConsumoJulho());
+				break;
+			case 8:
+				relatorioMensal.put("Agosto", getConsumoAgosto());
+				break;
+			case 9:
+				relatorioMensal.put("Setembro", getConsumoSetembro());
+				break;
+			case 10:
+				relatorioMensal.put("Outubro", getConsumoOutubro());
+				break;
+			case 11:
+				relatorioMensal.put("Novembro", getConsumoNovembro());
+				break;
+			case 12:
+				relatorioMensal.put("Dezembro", getConsumoDezembro());
+				break;
+		}
+		return relatorioMensal;
+	}
+
+	public Map<String, BigDecimal> relatorioPersonalizado(int mesInicial, int mesFinal) {
+		Map<String, BigDecimal> relatorioPersonalizado = new LinkedHashMap<>();
+		for(int x=mesInicial; x<=mesFinal; x++) {
+			switch (x) {
+				case 1:
+					relatorioPersonalizado.put("Janeiro", getConsumoJaneiro());
+					break;
+				case 2:
+					relatorioPersonalizado.put("Fevereiro", getConsumoFevereiro());
+					break;
+				case 3:
+					relatorioPersonalizado.put("Março", getConsumoMarco());
+					break;
+				case 4:
+					relatorioPersonalizado.put("Abril", getConsumoAbril());
+					break;
+				case 5:
+					relatorioPersonalizado.put("Maio", getConsumoMaio());
+					break;
+				case 6:
+					relatorioPersonalizado.put("Junho", getConsumoJunho());
+					break;
+				case 7:
+					relatorioPersonalizado.put("Julho", getConsumoJulho());
+					break;
+				case 8:
+					relatorioPersonalizado.put("Agosto", getConsumoAgosto());
+					break;
+				case 9:
+					relatorioPersonalizado.put("Setembro", getConsumoSetembro());
+					break;
+				case 10:
+					relatorioPersonalizado.put("Outubro", getConsumoOutubro());
+					break;
+				case 11:
+					relatorioPersonalizado.put("Novembro", getConsumoNovembro());
+					break;
+				case 12:
+					relatorioPersonalizado.put("Dezembro", getConsumoDezembro());
+					break;
+			}
+		}
+		return relatorioPersonalizado;
+	}
+
 }

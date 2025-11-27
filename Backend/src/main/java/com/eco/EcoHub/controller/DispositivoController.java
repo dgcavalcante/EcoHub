@@ -84,5 +84,25 @@ public class DispositivoController {
 	    }
 	}
 	
+	@GetMapping("/relatorioMensal/{id}/{mes}")
+	public ResponseEntity<?> gerarRelatorioMensal(@PathVariable UUID id, @PathVariable int mes) {
+	    try {
+	    	Map<String, BigDecimal> relatorio = dispositivoService.pegarRelatorioMensal(id, mes);
+	        return ResponseEntity.ok(relatorio);
+	    } catch (RuntimeException e) {
+	        return ResponseEntity.badRequest().body(e.getMessage());
+	    }
+	}
+	
+	@GetMapping("/relatorioPersonalizado/{id}/{mesInicial}/{mesFinal}")
+	public ResponseEntity<?> gerarRelatorioPersonalizado(@PathVariable UUID id, @PathVariable int mesInicial, @PathVariable int mesFinal) {
+	    try {
+	    	Map<String, BigDecimal> relatorio = dispositivoService.pegarRelatorioPersonalizado(id, mesInicial, mesFinal);
+	        return ResponseEntity.ok(relatorio);
+	    } catch (RuntimeException e) {
+	        return ResponseEntity.badRequest().body(e.getMessage());
+	    }
+	}
+	
 
 }
