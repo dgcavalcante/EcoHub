@@ -45,7 +45,6 @@ public class ComodoService {
 				.orElseThrow(() -> new RuntimeException("Comodo nao encontrado com o ID: " + id));
 		comodoRepository.delete(comodoExistente);		
 	}
-
 	public void adicionarDispositivoAoComodo(UUID idComodo, UUID idDispositivo) {
 		Comodo comodo = comodoRepository.findByIdComodo(idComodo)
 				.orElseThrow(() -> new RuntimeException("Comodo nao encontrado com o ID: " + idComodo));
