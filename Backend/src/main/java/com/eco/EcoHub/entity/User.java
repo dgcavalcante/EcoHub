@@ -41,15 +41,21 @@ import java.util.UUID;
         )
         private Set<Perfil> usuarioPerfis = new HashSet<>();
 
+        public Set<Perfil> getUsuarioPerfis() {
+			return usuarioPerfis;
+		}
 
-        public UUID getIdUser() {
+		public void setUsuarioPerfis(Set<Perfil> usuarioPerfis) {
+			this.usuarioPerfis = usuarioPerfis;
+		}
+
+		public UUID getIdUser() {
             return this.idUser;
         }
 
         public void setIdUser(UUID idUser) {
             this.idUser = idUser;
         }
-
 
         public String getNomeCompleto() {
             return this.nomeCompleto;
@@ -59,7 +65,6 @@ import java.util.UUID;
             this.nomeCompleto = nomeCompleto;
         }
 
-
         public String getCpf() {
             return this.cpf;
         }
@@ -67,7 +72,6 @@ import java.util.UUID;
         public void setCpf(String cpf) {
             this.cpf = cpf;
         }
-
 
         public String getDataNascimento() {
             return this.dataNascimento;
@@ -77,7 +81,6 @@ import java.util.UUID;
             this.dataNascimento = dataNascimento;
         }
 
-
         public String getEmail() {
             return this.email;
         }
@@ -86,7 +89,6 @@ import java.util.UUID;
             this.email = email;
         }
 
-
         public String getSenha() {
             return this.senha;
         }
@@ -94,7 +96,6 @@ import java.util.UUID;
         public void setSenha(String senha) {
             this.senha = senha;
         }
-
 
         public String getConfirmarSenha() {
             return this.confirmarSenha;

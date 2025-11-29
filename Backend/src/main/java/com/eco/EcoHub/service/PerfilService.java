@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.eco.EcoHub.entity.Perfil;
+import com.eco.EcoHub.entity.User;
 import com.eco.EcoHub.perfilDTO.PerfilDTO;
 import com.eco.EcoHub.repository.PerfilRepository;
-
-import jakarta.validation.Valid;
+import com.eco.EcoHub.repository.UserRepository;
 
 @Service
 public class PerfilService {
@@ -17,9 +17,20 @@ public class PerfilService {
 	@Autowired
 	private PerfilRepository perfilRepository;
 	
-	public Perfil criarPerfil(PerfilDTO perfilDTO) {
+	@Autowired
+	private UserService UserService;
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public Perfil criarPerfil(PerfilDTO perfilDTO, UUID id) {
+		User usuario = UserService.encontrarUsuarioPorID(id);
 		Perfil perfil = new Perfil();
 		perfil.setNome(perfilDTO.getNome());
+		perfilRepository.save(perfil);
+		usuario.getUsuarioPerfis().add(perfil);
+		perfil.getUsuario().add(usuario);
+		userRepository.save(usuario);
 		return perfilRepository.save(perfil);
 	}
 

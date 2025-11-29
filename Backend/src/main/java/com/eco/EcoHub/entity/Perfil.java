@@ -25,13 +25,21 @@ public class Perfil implements Serializable {
 	private String nome;
 	
 	@ManyToMany(mappedBy = "usuarioPerfis")
-	private Set<User> usuarios = new HashSet<>();
+	private Set<User> usuario = new HashSet<>();
 	
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public Set<User> getUsuario() {
+		return usuario;
+	}
+	
+	public void setUsuario(Set<User> usuario) {
+		this.usuario = usuario;
 	}
 
 }

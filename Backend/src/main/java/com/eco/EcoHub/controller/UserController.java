@@ -84,7 +84,6 @@ public class UserController {
                 } catch (RuntimeException e) {
                     return ResponseEntity.badRequest().body(e.getMessage());}
     }
-  
     // ENDPOINT: Recuperar senha
     @PostMapping("/recuperar-senha")
     public ResponseEntity<?> recuperarSenha(@RequestBody @Valid EmailDTO emailDTO) {

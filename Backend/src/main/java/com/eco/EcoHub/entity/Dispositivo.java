@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
@@ -14,6 +16,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -36,7 +39,6 @@ public class Dispositivo implements Serializable {
 		this.setConsumoOutubro(BigDecimal.ZERO);
 		this.setConsumoNovembro(BigDecimal.ZERO);
 		this.setConsumoDezembro(BigDecimal.ZERO);
-		this.setEmUmComodo(false);
 	}
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -55,6 +57,9 @@ public class Dispositivo implements Serializable {
 	@Column(name = "statusDispositivo")
 	private boolean statusDispositivo;
 	
+	@ManyToMany(mappedBy = "comodoDispositivos")
+	private Set<Comodo> dispositivo = new HashSet<>();
+	
 	private final ZoneId FUSO_BR = ZoneId.of("America/Sao_Paulo");
 	
 	private ZonedDateTime dataCriacao;
@@ -64,9 +69,6 @@ public class Dispositivo implements Serializable {
 	@Column(name = "consumo_total")
 	private BigDecimal consumoTotal;
 	
-	@Column(name = "em_um_comodo")
-	private boolean emUmComodo;
-
 	@Column(name = "consumo_janeiro")
 	private BigDecimal consumoJaneiro;
 	
@@ -102,6 +104,14 @@ public class Dispositivo implements Serializable {
 	
 	@Column(name = "consumo_dezembro")
 	private BigDecimal consumoDezembro;
+	
+	public Set<Comodo> dispositivo() {
+		return this.dispositivo;
+	}
+	
+	public void setDispositivo(Set<Comodo> dispositivo) {
+		this.dispositivo = dispositivo;
+	}
 	
 	public void injetarConsumoPorHora(int mes, int quantidadeDeHoras) {
 		BigDecimal calculo = BigDecimal.ZERO;
@@ -322,12 +332,6 @@ public class Dispositivo implements Serializable {
 
 	public void setConsumoTotal(BigDecimal consumoTotal) {
 		this.consumoTotal = consumoTotal;
-	}
-	public boolean isEmUmComodo() {
-		return emUmComodo;
-	}
-	public void setEmUmComodo(boolean emUmComodo) {
-		this.emUmComodo = emUmComodo;
 	}
 
 	public Map<String, BigDecimal> relatorioMensal(int mes) {

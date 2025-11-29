@@ -25,10 +25,10 @@ public class PerfilController {
 	@Autowired
 	private PerfilService perfilService;
 	
-	@PostMapping("/cadastro")
-	public ResponseEntity<?> cadastrarPerfil(@Valid @RequestBody PerfilDTO perfilDTO) {
+	@PostMapping("/cadastro/{id}")
+	public ResponseEntity<?> cadastrarPerfil(@PathVariable UUID id, @Valid @RequestBody PerfilDTO perfilDTO) {
 		try {
-			Perfil novoPerfil = perfilService.criarPerfil(perfilDTO);
+			Perfil novoPerfil = perfilService.criarPerfil(perfilDTO, id);
 			return ResponseEntity.ok(novoPerfil);
 			} catch (RuntimeException e) {
 				return ResponseEntity.badRequest().body(e.getMessage());
