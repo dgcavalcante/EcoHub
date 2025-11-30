@@ -5,7 +5,7 @@ import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-gerar-relatorios',
-  standalone: true,              // 👈 ESSA LINHA FAZ TODA A DIFERENÇA
+  standalone: true,             
   imports: [RouterModule, CommonModule],
   templateUrl: './gerar-relatorios.html',
   styleUrl: './gerar-relatorios.css',
@@ -31,7 +31,6 @@ export class GerarRelatorios {
     const fim = (form.querySelector('#data-fim') as HTMLInputElement).value;
 
     if (tipo === 'por-aparelho') {
-      // aparelho is expected to be device id when populated
       const id = aparelho;
       if (!id || id === 'todos') {
         alert('Selecione um aparelho válido');

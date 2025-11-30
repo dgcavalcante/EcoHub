@@ -3,6 +3,7 @@
     import jakarta.persistence.*;
     import jakarta.validation.constraints.Email;
     import jakarta.validation.constraints.NotBlank;
+    import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -39,6 +40,7 @@ import java.util.UUID;
         		joinColumns = @JoinColumn(name = "idUser"),
 				inverseJoinColumns = @JoinColumn(name = "idPerfil")
         )
+        @JsonIgnore
         private Set<Perfil> usuarioPerfis = new HashSet<>();
 
         public Set<Perfil> getUsuarioPerfis() {

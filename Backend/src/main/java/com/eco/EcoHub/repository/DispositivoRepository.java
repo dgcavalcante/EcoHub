@@ -11,7 +11,6 @@ import com.eco.EcoHub.entity.Dispositivo;
 @Repository
 public interface DispositivoRepository extends JpaRepository<Dispositivo, UUID> {
 	Optional<Dispositivo> findByIdDispositivo(UUID idDispositivo);
-	boolean existsByemUmComodoTrue();
 
 }
 

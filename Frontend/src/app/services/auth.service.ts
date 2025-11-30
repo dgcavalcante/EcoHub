@@ -17,14 +17,11 @@ export class AuthService {
 
   login(email: string, senha: string): Observable<any> {
     return this.api.login(email, senha).pipe(
-      // If backend returned a user object (or {user, token}) we'll use it; otherwise
-      // backend returns a success string, so fetch the user by email from listarUsuarios()
       switchMap((userOrPayload: any) => {
         const possibleUser = userOrPayload?.user ?? userOrPayload;
         if (possibleUser && typeof possibleUser === 'object') {
           return of(possibleUser);
         }
-        // fallback: load users and find by email
         return this.api.listarUsuarios().pipe(
           map((list: any[]) => {
             if (!Array.isArray(list)) return null;
@@ -33,7 +30,6 @@ export class AuthService {
         );
       }),
       map((user: any) => {
-        // If we couldn't find a user after backend success, treat as error.
         if (!user) throw { error: 'Usuário não encontrado após autenticação' };
         return user;
       }),

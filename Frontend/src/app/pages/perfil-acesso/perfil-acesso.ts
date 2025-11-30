@@ -18,7 +18,6 @@ export class PerfilAcesso implements OnInit {
   constructor(private api: ApiService, private auth: AuthService, private router: Router) {}
 
   goBack(): void {
-    // From perfil-acesso we want to return to the dashboard
     this.router.navigate(['/dashboard']);
   }
 

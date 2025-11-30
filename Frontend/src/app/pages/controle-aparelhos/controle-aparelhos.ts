@@ -5,7 +5,7 @@ import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-controle-aparelhos',
-  standalone: true,              // 👈 ESSA LINHA FAZ TODA A DIFERENÇA
+  standalone: true,             
   imports: [RouterModule, CommonModule],
   templateUrl: './controle-aparelhos.html',
   styleUrl: './controle-aparelhos.css',

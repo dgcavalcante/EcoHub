@@ -14,7 +14,6 @@ import { AuthService } from '../../services/auth.service';
 export class Login {
   constructor(private auth: AuthService, private api: ApiService, private router: Router) {}
   goBack(): void {
-    // On login page, back should go to the landing page
     this.router.navigate(['/landingpage']);
   }
   clearPassword(): void {

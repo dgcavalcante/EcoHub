@@ -15,7 +15,6 @@ export class AdicionarPerfil {
   constructor(private api: ApiService, private router: Router) {}
 
   goBack(): void {
-    // On adicionar-perfil page, back should go to dashboard
     this.router.navigate(['/dashboard']);
   }
 
