@@ -73,6 +73,10 @@ O **EcoHub** segue uma **arquitetura cliente-servidor** modular e escalável:
 
 ---
 
+### **Como Rodar a APlicação?
+**Entre em Backend, e rode: source env.sh ; logo em seguida: ./mvnw spring-boot:run**
+**Para o Frontend: npm run start**
+
 ## 👥 **Membros da Equipe**
 <table align="center">
   <tr>

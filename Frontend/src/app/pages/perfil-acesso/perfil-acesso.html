@@ -1,23 +1,24 @@
 <!-- 
   Este é o HTML para a nova tela de Perfis de Acesso, inspirada na Netflix.
   Ela apresenta cards de perfil para seleção e um botão para adicionar novos.
---><div class="perfil-acesso-container">
+-->
+<div class="perfil-acesso-container">
+    <button class="back-btn" type="button" (click)="goBack()">← Voltar</button>
     <div class="perfil-header">
         <h1>Quem está usando o EcoHub?</h1>
+        <div class="logged-user" *ngIf="currentUserName">
+            <small>Logado como: {{ currentUserName }}</small>
+        </div>
     </div>
 
     <div class="perfis-grid">
-        <!-- Exemplo de Perfil Existente --><a routerLink="/dashboard" class="perfil-card">
-            <img src="https://via.placeholder.com/180/C8F7A6/1A340F?text=User1" alt="Foto do Usuário 1">
-            <span class="perfil-nome">Usuário 1</span>
+        <a *ngFor="let p of perfis" [routerLink]="['/dashboard']" class="perfil-card">
+            <img [src]="p.fotoUrl || 'https://via.placeholder.com/180/C8F7A6/1A340F?text=Perfil'" alt="Foto do Perfil">
+            <span class="perfil-nome">{{p.nome}}</span>
         </a>
 
-        <!-- Outro Exemplo de Perfil Existente --><a routerLink="/dashboard" class="perfil-card">
-            <img src="https://via.placeholder.com/180/376C3A/C8F7A6?text=User2" alt="Foto do Usuário 2">
-            <span class="perfil-nome">Usuário 2</span>
-        </a>
-
-        <!-- Card para Adicionar Novo Perfil --><a routerLink="/adicionar-perfil" class="perfil-card add-perfil">
+        <!-- Card para Adicionar Novo Perfil -->
+        <a routerLink="/adicionar-perfil" class="perfil-card add-perfil">
             <div class="add-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </div>

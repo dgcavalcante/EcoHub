@@ -87,21 +87,24 @@
             <div class="summary-card">
                 <h2>Total de Consumo (Semanal)</h2>
                 <div class="summary-value">
-                    52,3
+                    <!-- placeholder: you can compute real totals in component -->
+                    --
                     <span class="unit">kWh</span>
                 </div>
-                <p class="summary-comparison">+5% em relação à semana passada</p>
+                <p class="summary-comparison">—</p>
             </div>
 
             <!-- Card do Gráfico de Pizza -->
             <div class="chart-card">
                 <h2>Consumo por Categoria</h2>
                 <div class="chart-placeholder">
-                    <!-- 
-                        Placeholder para o gráfico de pizza (Chart.js, etc.)
-                        A imagem simula o gráfico e a legenda da sua imagem.
-                    -->
-                    <img src="https://placehold.co/400x400/FFFFFF/376C3A?text=Gr%C3%A1fico+de+Pizza+e+Legenda" alt="Placeholder de Gráfico de Pizza">
+                    <p *ngIf="!devices || devices.length === 0">Sem dados para exibir.</p>
+                    <div *ngIf="devices && devices.length > 0">
+                        <p>Dispositivos carregados: {{ devices.length }}</p>
+                        <ul>
+                            <li *ngFor="let d of devices">{{ d.nome || d.name }} — {{ d.consumoPorHora || d.consumption || 0 }} W</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 

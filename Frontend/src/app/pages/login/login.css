@@ -10,6 +10,7 @@
     height: 100vh; 
     font-family: Arial, sans-serif;
     overflow: hidden; 
+    position: relative;
 }
 
 
@@ -178,4 +179,21 @@ button.action-link {
 .btn-cadastro-right:hover {
     background-color: var(--eco-white);
     color: var(--eco-green-dark);
+}
+
+/* Back button in the top-left */
+.back-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: transparent;
+    border: none;
+    color: var(--eco-white);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+.back-btn:hover {
+    background: rgba(255,255,255,0.06);
 }

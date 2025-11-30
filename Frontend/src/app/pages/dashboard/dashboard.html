@@ -84,7 +84,7 @@
 
         <!-- Seção de Boas-Vindas -->
         <section class="welcome-header">
-            <h1>Olá, [Nome]!</h1>
+            <h1>Olá, {{ userName || 'Usuário' }}!</h1>
             <p>Bem-vindo de volta ao seu painel de controle energético.</p>
         </section>
 
@@ -105,17 +105,17 @@
         <section class="stats-grid">
             <div class="stat-card">
                 <h3>Dispositivos Ativos</h3>
-                <span class="stat-value">9</span>
+                <span class="stat-value">{{ devicesCount }}</span>
                 <a routerLink="/controle-aparelhos" class="stat-link">Ver todos</a>
             </div>
             <div class="stat-card">
-                <h3>Meta Mensal</h3>
-                <span class="stat-value">78%</span>
-                <span class="stat-subtext">Atingida</span>
+                <h3>Usuários</h3>
+                <span class="stat-value">{{ usersCount }}</span>
+                <span class="stat-subtext">Registrados</span>
             </div>
             <div class="stat-card alert">
                 <h3>Alertas</h3>
-                <span class="stat-value">2</span>
+                <span class="stat-value">—</span>
                 <span class="stat-subtext">Novos alertas de consumo</span>
             </div>
         </section>

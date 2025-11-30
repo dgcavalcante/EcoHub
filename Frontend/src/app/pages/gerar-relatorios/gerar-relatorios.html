@@ -84,7 +84,7 @@
         <section class="report-form-container">
             <div class="form-card">
                 <h2>Selecione os Parâmetros</h2>
-                <form class="report-form">
+                <form class="report-form" (submit)="onSubmit($event)">
                     
                     <div class="form-group">
                         <label for="tipo-relatorio">Tipo de Relatório</label>
@@ -100,10 +100,7 @@
                         <label for="aparelho">Aparelho</label>
                         <select id="aparelho">
                             <option value="todos">Todos os Aparelhos</option>
-                            <option value="ar-condicionado">Ar Condicionado</option>
-                            <option value="lampada-quarto">Lâmpada Quarto</option>
-                            <option value="tv-sala">TV Sala</option>
-                            <option value="tomada-cozinha">Tomada Cozinha</option>
+                            <option *ngFor="let d of devices" [value]="d.id">{{d.nome}}</option>
                         </select>
                     </div>
 

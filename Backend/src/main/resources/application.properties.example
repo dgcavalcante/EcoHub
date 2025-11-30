@@ -1,0 +1,43 @@
+spring.application.name=EcoHub
+
+# Database Configuration - NEON.TECH (example)
+# Replace the placeholder values with your Neon connection information or set the
+# corresponding environment variables used in `application.properties`.
+spring.datasource.url=jdbc:postgresql://<your-neon-host>:5432/<your-db>?sslmode=require
+spring.datasource.username=<your_db_username>
+spring.datasource.password=<your_db_password>
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA Configuration
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+
+# HikariCP Connection Pool (recommended defaults for Neon)
+spring.datasource.hikari.maximum-pool-size=5
+spring.datasource.hikari.minimum-idle=2
+spring.datasource.hikari.idle-timeout=600000
+spring.datasource.hikari.max-lifetime=1800000
+spring.datasource.hikari.connection-timeout=30000
+spring.datasource.hikari.leak-detection-threshold=2000
+
+# Mail Configuration (example)
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=ecohubcomp@gmail.com
+spring.mail.password=<your_mail_password>
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.connectiontimeout=5000
+spring.mail.properties.mail.smtp.timeout=5000
+spring.mail.properties.mail.smtp.writetimeout=5000
+
+# Notes:
+# - Do NOT commit real credentials. Use environment variables or a secrets manager.
+# - Locally you can export the variables and run `./mvnw spring-boot:run`.
+
+# Configure whether the JPA EntityManager is kept open during view rendering.
+# It is safer to set this to false to avoid lazy-loading in the view layer.
+spring.jpa.open-in-view=false

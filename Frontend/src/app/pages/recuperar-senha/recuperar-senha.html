@@ -24,7 +24,9 @@
                 <button type="submit" class="btn-enviar">ENVIAR</button>
                 
                 <a routerLink="/login" class="back-to-login">Voltar para o Login</a>
+            <form (submit)="onSubmit($event)">
+                <label for="recover-email">Email</label>
+                <input id="recover-email" type="email" required />
+                <button type="submit">Enviar</button>
+                <div class="message" id="recover-message"></div>
             </form>
-        </div>
-    </div>
-</div>

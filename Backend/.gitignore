@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Local environment file (avoid committing credentials)
+env.sh

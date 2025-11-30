@@ -105,81 +105,24 @@
 
 
         <section class="devices-grid">
-
-            <div class="device-card active">
+            <div *ngIf="!devices || devices.length === 0" class="empty">Nenhum aparelho encontrado.</div>
+            <div *ngFor="let d of devices" class="device-card" [class.active]="d.statusDispositivo">
                 <div class="card-header">
                     <div class="device-icon">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.09 14.05C15.03 13.5 15 12.76 15 12c0-.76.03-1.5.09-2.05.17-1.39.73-2.58 1.58-3.44.84-.85 1.98-1.5 3.33-1.61"></path><path d="M9 12c0 .76-.03 1.5-.09 2.05-.17 1.39-.73 2.58-1.58 3.44-.84.85-1.98 1.5-3.33 1.61"></path><path d="M12 2a4 4 0 0 0-4 4v2c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V6a4 4 0 0 0-4-4Z"></path><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17h2a2.5 2.5 0 0 0 2.5-2.5V10h-7v4.5Z"></path></svg>
+                        <!-- simple icon placeholder -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle></svg>
                     </div>
                     <label class="switch">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" [checked]="d.statusDispositivo" />
                         <span class="slider"></span>
                     </label>
                 </div>
                 <div class="card-body">
-                    <h3>Lâmpada Quarto</h3>
-                    <span class="status">Ligado</span>
-                    <span class="consumption">Consumo: 75W</span>
+                    <h3>{{ d.nome || d.name || 'Aparelho' }}</h3>
+                    <span class="status">{{ d.statusDispositivo ? 'Ligado' : 'Desligado' }}</span>
+                    <span class="consumption">Consumo: {{ d.consumoPorHora || d.consumption || 0 }} W</span>
                 </div>
             </div>
-
-
-            <div class="device-card">
-                <div class="card-header">
-                    <div class="device-icon">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="8" y1="20" x2="8" y2="20"></line><line x1="12" y1="18" x2="12" y2="18"></line><line x1="12" y1="22" x2="12" y2="22"></line><line x1="16" y1="16" x2="16" y2="16"></line><line x1="16" y1="20" x2="16" y2="20"></line></svg>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="card-body">
-                    <h3>Ar Condicionado</h3>
-                    <span class="status">Desligado</span>
-                    <span class="consumption">Consumo: 0W</span>
-                </div>
-            </div>
-            
-
-            <div class="device-card">
-                <div class="card-header">
-                    <div class="device-icon">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="card-body">
-                    <h3>TV Sala</h3>
-                    <span class="status">Desligado</span>
-                    <span class="consumption">Consumo: 2W (Stand-by)</span>
-                </div>
-            </div>
-
-            <div class="device-card active">
-                <div class="card-header">
-                    <div class="device-icon">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v2"></path><path d="M10 20v-5"></path><path d="M14 20v-5"></path><path d="M12 15h.01"></path><path d="M4 10h16v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6Z"></path></svg>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="card-body">
-                    <h3>Tomada Cozinha</h3>
-                    <span class="status">Ligado</span>
-                    <span class="consumption">Consumo: 1200W</span>
-                </div>
-            </div>
-
         </section>
 
     </main>

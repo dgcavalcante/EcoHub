@@ -1,8 +1,9 @@
 <div class="perfil-config-container">
+    <button class="back-btn" type="button" (click)="goBack()">← Voltar</button>
     <div class="config-card">
         <h2>Criar Novo Perfil</h2>
         
-        <form class="config-form">
+        <form class="config-form" (submit)="onSubmit($event)">
             <div class="form-group-config">
                 <label for="perfil-nome">Nome do Perfil</label>
                 <input type="text" id="perfil-nome" placeholder="Ex: Meu Lar, Escritório, etc." required>

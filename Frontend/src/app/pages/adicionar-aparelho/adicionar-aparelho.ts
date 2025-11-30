@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core'; // Component e OnInit importados corretamente
-import { Router, RouterModule } from '@angular/router'; // Router e RouterModule consolidados
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../../environments/environment';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-adicionar-aparelho',
@@ -12,7 +14,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class AdicionarAparelhoComponent implements OnInit {
 
-  // Modelo de dados vinculado ao formulário usando [(ngModel)] USEI PARA TESTE (Pode apagar)
   newDevice = {
     name: '',
     type: '',
@@ -21,23 +22,26 @@ export class AdicionarAparelhoComponent implements OnInit {
     ip: ''
   };
 
-  // O Router é injetado no construtor
-  constructor(private router: Router) { } 
+  constructor(private router: Router, private api: ApiService) { }
 
-  ngOnInit(): void {
-    // Inicialização, se necessário
-  }
+  ngOnInit(): void {}
 
-  /**
-   * Função chamada quando o formulário é submetido (ngSubmit).
-   * Contém a lógica de simulação para salvar e navegar.
-   */
-  saveDevice() {
-    console.log('Dados do novo aparelho salvos (Simulação):', this.newDevice);
-    // Nota: O 'alert()' deve ser substituído por um modal customizado em produção.
-    alert(`Aparelho "${this.newDevice.name}" adicionado com sucesso!`);
-
-    // Após salvar (simulação), navega de volta para a lista de aparelhos
-    this.router.navigate(['/controle-aparelhos']); 
+  async saveDevice() {
+    const dto: any = {
+      nome: this.newDevice.name,
+      tipo: this.newDevice.type,
+      consumoPorHora: this.newDevice.consumption,
+      statusDispositivo: true
+    };
+    this.api.cadastrarDispositivo(dto).subscribe({
+      next: () => {
+        alert('Aparelho adicionado com sucesso');
+        this.router.navigate(['/controle-aparelhos']);
+      },
+      error: (err) => {
+        const msg = err?.error || err?.message || 'Erro de rede';
+        alert('Erro: ' + msg);
+      }
+    });
   }
 }

@@ -8,7 +8,7 @@
     <div class="cadastro-right-panel">
         <div class="cadastro-content">
             <h3>CADASTRE-SE</h3>
-            <form class="cadastro-form">
+            <form class="cadastro-form" (submit)="onSubmit($event)">
                 <div class="form-group">
                     <input type="text" id="nome-completo" required placeholder=" ">
                     <label for="nome-completo">NOME COMPLETO</label>

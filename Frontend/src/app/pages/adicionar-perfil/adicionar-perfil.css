@@ -8,6 +8,7 @@
     color: #E5E5E5;
     box-sizing: border-box;
     padding: 2rem;
+    position: relative;
 }
 
 .perfil-config-container {
@@ -144,6 +145,24 @@
     background-color: #C8F7A6;
     border-color: #C8F7A6;
     color: #141414;
+}
+
+/* Back button in top-left */
+.back-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: transparent;
+    border: none;
+    color: #E5E5E5;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    z-index: 50;
+}
+.back-btn:hover {
+    background: rgba(255,255,255,0.04);
 }
 
 

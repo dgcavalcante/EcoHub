@@ -6,9 +6,10 @@
     </div>
 
     <div class="login-right-panel">
+        <button class="back-btn" type="button" (click)="goBack()">← Voltar</button>
         <div class="login-content">
             <h3>ACESSE SUA CONTA</h3>
-            <form class="login-form">
+            <form class="login-form" (submit)="onSubmit($event)">
                 <div class="form-group">
                     <input type="text" id="login-email" required placeholder=" ">
                     <label for="login-email">EMAIL</label>
