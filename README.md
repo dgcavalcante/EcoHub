@@ -35,7 +35,8 @@ Assim, o EcoHub atua como uma ponte entre **tecnologia, sustentabilidade e econo
 
 📌 **Link do Quadro:** [Trello](https://trello.com/b/DWRbwHo4/ecohub)  
 
-<img width="1878" height="906" alt="image" src="https://github.com/user-attachments/assets/ee30011e-2c12-4e78-9ccc-6b2c37e27460" />
+<img width="1878" height="906" alt="image" src="<img width="1877" height="956" alt="image" src="https://github.com/user-attachments/assets/22eb4dbf-88bb-4a59-8e73-fb98f82a5169" />
+" />
 
 ---
 
