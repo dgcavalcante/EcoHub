@@ -91,7 +91,7 @@ npm run start
 
 ### ▶️ Protótipo Navegável (Figma)
 <p align="center">
-
+https://github.com/user-attachments/assets/0f49b76c-fa65-4bef-beaf-e38e6bf5a2ce
 </p>
 
 ---
