@@ -84,7 +84,23 @@ source env.sh
 cd frontend
 npm run start
 
+---
 
+## 🎥 Vídeos Demonstrativos
+
+### ▶️ Protótipo Navegável (Figma)
+<p align="center">
+
+</p>
+
+---
+
+### ▶️ Sistema Completo (Finalizado)
+<p align="center">
+https://github.com/user-attachments/assets/c5667a45-0057-408e-8572-ebbf5ca49b78
+</p>
+
+---
 ## 👥 **Membros da Equipe**
 <table align="center">
   <tr>
